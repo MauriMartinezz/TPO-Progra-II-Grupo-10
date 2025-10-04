@@ -1,6 +1,12 @@
 # Distribución de Ejercicios - TPO Programación II
 
 ---
+## Carpetas: 
+- Implementación
+- Interfaz
+- Uso: Acá van a estar las respuestas de cada consigna
+- Utils: Clases con métodos para ser reutilizados, ahorrando tiempo y código (por ejemplo para imprimir o para rellenar una Pila) 
+--- 
 
 ## @Lean
 Ejercicios más fáciles, centrados en **uso de TDA**:
