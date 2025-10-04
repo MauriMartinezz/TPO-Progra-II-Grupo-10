@@ -26,7 +26,7 @@ Ejercicios más fáciles, centrados en **uso de TDA**:
 ## @Mauri
 Ejercicios de **uso de TDA**, nivel inicial-intermedio:
 
-- **Ejercicio 7 (uso)**  
+[x] **Ejercicio 7 (uso)**  
   Definir un método que reciba una `PilaTDA` y devuelva un `ConjuntoTDA` con los **elementos repetidos**.  
   → Detectar duplicados y agregarlos al conjunto.
 
