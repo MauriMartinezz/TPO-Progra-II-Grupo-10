@@ -6,7 +6,8 @@ import implementacion.Pila;
 import interfaz.PilaTDA;
 
 public class PilaUtils {
-    public static void rellenarPila(PilaTDA pila, int cantidad, int numMaximo, Random random){
+    static Random random = new Random();
+    public static void rellenarPila(PilaTDA pila, int cantidad, int numMaximo){
         for(int i=0; i<cantidad; i++){
             pila.apilar(random.nextInt(numMaximo));
         }
@@ -28,7 +29,7 @@ public class PilaUtils {
         }
     }
 
-       public static void rellenarPila(PilaTDA pila, int cantidad, int numMaximo, Random random){
+       public static void rellenarPila(PilaTDA pila, int cantidad, int numMaximo){
         for(int i=0; i<cantidad; i++){
             pila.apilar(random.nextInt(numMaximo));
         }

@@ -4,7 +4,6 @@ import implementacion.Conjunto;
 import implementacion.Pila;
 import interfaz.ConjuntoTDA;
 import interfaz.PilaTDA;
-import java.util.Random;
 import utils.ConjuntoUtils;
 import utils.PilaUtils;
 //     - **Ejercicio 7 (uso)**  
@@ -36,10 +35,9 @@ public class Punto_VII {
     }
 
     public static void main(String[] args) {
-        Random random = new Random();
         PilaTDA pila = new Pila();
         pila.inicializar();
-        PilaUtils.rellenarPila(pila, 10, 10, random);
+        PilaUtils.rellenarPila(pila, 10, 10);
         
         System.out.println("***********************");
         System.out.println("Elementos de la PILA:");
