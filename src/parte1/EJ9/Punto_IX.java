@@ -1,4 +1,4 @@
-package uso;
+package parte1.EJ9;
 
 import implementacion.Cola;
 import implementacion.Conjunto;

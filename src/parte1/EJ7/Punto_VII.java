@@ -1,4 +1,4 @@
-package uso;
+package parte1.EJ7;
 
 import implementacion.Conjunto;
 import implementacion.Pila;
