@@ -4,7 +4,7 @@
 
 |Ejercicio| Responsable | Tipo | Completado |
 |---|---|---| --- |
-|[Ejercicio 1](#ejercicio-1) | `@Lucio` | Implementación | ⬜️ | 
+|[Ejercicio 1](#ejercicio-1) | `@Lucio` | Implementación | ✅ | 
 |[Ejercicio 2](#ejercicio-2) | `@Demian` | Implementación | ⬜️ |
 |[Ejercicio 3](#ejercicio-3) | `@Lucio` | Implementación | ⬜️ |
 |[Ejercicio 4](#ejercicio-4) | `@Demian` | Implementación | ⬜️ |
