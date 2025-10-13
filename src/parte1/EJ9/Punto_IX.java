@@ -1,11 +1,11 @@
 package parte1.EJ9;
 
-import implementacion.Cola;
-import implementacion.Conjunto;
-import implementacion.Pila;
-import interfaz.ColaTDA;
-import interfaz.ConjuntoTDA;
-import interfaz.PilaTDA;
+import imple.Cola;
+import imple.Conjunto;
+import imple.Pila;
+import tda.ColaTDA;
+import tda.ConjuntoTDA;
+import tda.PilaTDA;
 import utils.ColaUtils;
 import utils.ConjuntoUtils;
 import utils.PilaUtils;
@@ -15,31 +15,31 @@ import utils.PilaUtils;
 public class Punto_IX {
     public static ConjuntoTDA devolverElementosComunesPilaCola(PilaTDA pila, ColaTDA cola){
         ConjuntoTDA conjuntoComunes = new Conjunto();
-        conjuntoComunes.inicializar();
+        conjuntoComunes.inicializarConjunto();
         
         PilaTDA pilaAux = new Pila();
-        pilaAux.inicializar();
+        pilaAux.inicializarPila();
         
         ColaTDA colaAux = new Cola();
-        colaAux.inicializar();
+        colaAux.inicializarCola();
 
-        while(!pila.estaVacia()){
+        while(!pila.pilaVacia()){
             pilaAux.apilar(pila.tope());
             
-            while(!cola.estaVacia()){
+            while(!cola.colaVacia()){
                 if(pila.tope() == cola.primero()) conjuntoComunes.agregar(pila.tope());
                 colaAux.acolar(cola.primero());
                 cola.desacolar();
             }
 
-            while(!colaAux.estaVacia()){
+            while(!colaAux.colaVacia()){
                 cola.acolar(colaAux.primero());
                 colaAux.desacolar();
             }
             pila.desapilar();
         }
 
-        while(!pilaAux.estaVacia()){
+        while(!pilaAux.pilaVacia()){
             pila.apilar(pilaAux.tope());
             pilaAux.desapilar();
         }
@@ -49,10 +49,10 @@ public class Punto_IX {
 
     public static void main(String[] args) {
         PilaTDA pila = new Pila();
-        pila.inicializar();
+        pila.inicializarPila();
 
         ColaTDA cola = new Cola();
-        cola.inicializar();
+        cola.inicializarCola();
 
         PilaUtils.rellenarPila(pila, 10, 10);
         ColaUtils.rellenarCola(cola,10,10);

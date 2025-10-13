@@ -2,8 +2,8 @@ package utils;
 
 import java.util.Random;
 
-import interfaz.ColaTDA;
-import implementacion.Cola;
+import tda.ColaTDA;
+import imple.Cola;
 
 public class ColaUtils {
 
@@ -17,14 +17,14 @@ public class ColaUtils {
 
     public static void imprimirCola(ColaTDA cola){
         ColaTDA colaAux = new Cola();
-        colaAux.inicializar();
-        while(!cola.estaVacia()){
+        colaAux.inicializarCola();
+        while(!cola.colaVacia()){
             System.out.println(cola.primero());
             colaAux.acolar(cola.primero());
             cola.desacolar();
         }
 
-        while(!colaAux.estaVacia()){
+        while(!colaAux.colaVacia()){
             cola.acolar(colaAux.primero());
             colaAux.desacolar();
         }

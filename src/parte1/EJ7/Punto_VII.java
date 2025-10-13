@@ -1,9 +1,9 @@
 package parte1.EJ7;
 
-import implementacion.Conjunto;
-import implementacion.Pila;
-import interfaz.ConjuntoTDA;
-import interfaz.PilaTDA;
+import imple.Conjunto;
+import imple.Pila;
+import tda.ConjuntoTDA;
+import tda.PilaTDA;
 import utils.ConjuntoUtils;
 import utils.PilaUtils;
 //     - **Ejercicio 7 (uso)**  
@@ -14,19 +14,19 @@ public class Punto_VII {
 
     public static ConjuntoTDA devolverRepetidosPila(PilaTDA pila){
         ConjuntoTDA conjunto = new Conjunto();
-        conjunto.inicializar();
+        conjunto.inicializarConjunto();
 
         PilaTDA pilaAux = new Pila();
-        pilaAux.inicializar();
+        pilaAux.inicializarPila();
 
 
-        while(!pila.estaVacia()){
+        while(!pila.pilaVacia()){
             conjunto.agregar(pila.tope());
             pilaAux.apilar(pila.tope());
             pila.desapilar();
         }
 
-        while(!pilaAux.estaVacia()){
+        while(!pilaAux.pilaVacia()){
             pila.apilar(pilaAux.tope());
             pilaAux.desapilar();
         }
@@ -36,7 +36,7 @@ public class Punto_VII {
 
     public static void main(String[] args) {
         PilaTDA pila = new Pila();
-        pila.inicializar();
+        pila.inicializarPila();
         PilaUtils.rellenarPila(pila, 10, 10);
         
         System.out.println("***********************");

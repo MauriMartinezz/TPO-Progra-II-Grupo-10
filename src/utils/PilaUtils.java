@@ -2,36 +2,37 @@ package utils;
 
 import java.util.Random;
 
-import implementacion.Pila;
-import interfaz.PilaTDA;
+import imple.Pila;
+import tda.PilaTDA;
 
 public class PilaUtils {
     static Random random = new Random();
-    public static void rellenarPila(PilaTDA pila, int cantidad, int numMaximo){
-        for(int i=0; i<cantidad; i++){
+
+    public static void rellenarPila(PilaTDA pila, int cantidad, int numMaximo) {
+        for (int i = 0; i < cantidad; i++) {
             pila.apilar(random.nextInt(numMaximo));
         }
     }
 
-        public static void imprimirPila(PilaTDA pila){
+    public static void imprimirPila(PilaTDA pila) {
         PilaTDA pilaAux = new Pila();
-        pilaAux.inicializar();
+        pilaAux.inicializarPila();
 
-        while(!pila.estaVacia()){
+        while (!pila.pilaVacia()) {
             System.out.println(pila.tope());
             pilaAux.apilar(pila.tope());
             pila.desapilar();
         }
 
-        while(!pilaAux.estaVacia()){
+        while (!pilaAux.pilaVacia()) {
             pila.apilar(pilaAux.tope());
             pilaAux.desapilar();
         }
     }
 
-       public static void rellenarPila(PilaTDA pila, int cantidad, int numMaximo){
-        for(int i=0; i<cantidad; i++){
-            pila.apilar(random.nextInt(numMaximo));
-        }
-    }
+    // public static void rellenarPila(PilaTDA pila, int cantidad, int numMaximo) {
+    //     for (int i = 0; i < cantidad; i++) {
+    //         pila.apilar(random.nextInt(numMaximo));
+    //     }
+    // }
 }

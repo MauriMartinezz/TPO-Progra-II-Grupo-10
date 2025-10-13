@@ -25,7 +25,6 @@
 | [Ejercicio 19](#ejercicio-19--árbol-b-orden-4) | `@Lucio`    | Uso            | ⬜️          |
 | [Ejercicio 20](#ejercicio-20--árbol-b-orden-5) | `@Lucio`    | Uso            | ⬜️          |
 
-
 ---
 ## Primera parte
 
