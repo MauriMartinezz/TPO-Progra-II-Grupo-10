@@ -1,30 +1,18 @@
 package parte1.EJ1;
-import imple.Conjunto;
 
-public class ConjuntoEspecialTDA {
+// Interfaz ConjuntoEspecialTDA
+public interface ConjuntoEspecialTDA {
 
-    private Conjunto conjunto;
-
-    public ConjuntoEspecialTDA() {
-        conjunto = new Conjunto();
+    // Clase que encapsula la respuesta de las operaciones
+    public class Respuesta {
+        public boolean error; // true si hubo error, false si no
+        public int rta;       // valor devuelto, si corresponde
     }
 
-    public Respuesta agregar(int elemento) {
-        // chequear si el elemento se agregó correctamente
-        conjunto.agregar(elemento);
-        boolean exito = conjunto.pertenece(elemento);
-        return new Respuesta(exito, elemento);
-    }
-
-    public Respuesta eliminar(int elemento) {
-        conjunto.sacar(elemento);
-        boolean exito = !conjunto.pertenece(elemento);
-        return new Respuesta(exito, elemento);
-    }
-
-    public Respuesta contiene(int elemento) {
-        boolean existe = conjunto.pertenece(elemento);
-        int valor = existe ? elemento : -1;
-        return new Respuesta(true, valor);
-    }
+    void inicializarConjunto();            // Inicializa el conjunto
+    Respuesta agregar(int valor);          // Agrega un valor al conjunto
+    Respuesta sacar(int valor);            // Elimina un valor del conjunto
+    Respuesta elegir();                    // Devuelve un valor del conjunto
+    boolean pertenece(int valor);          // Indica si un valor pertenece
+    boolean conjuntoVacio();               // Indica si el conjunto está vacío
 }

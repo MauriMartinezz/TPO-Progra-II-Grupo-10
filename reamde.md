@@ -2,28 +2,28 @@
 
 ## Indice:
 
-|Ejercicio| Responsable | Tipo | Completado |
-|---|---|---| --- |
-|[Ejercicio 1](#ejercicio-1) | `@Lucio` | Implementación | ✅ | 
-|[Ejercicio 2](#ejercicio-2) | `@Demian` | Implementación | ⬜️ |
-|[Ejercicio 3](#ejercicio-3) | `@Lucio` | Implementación | ⬜️ |
-|[Ejercicio 4](#ejercicio-4) | `@Demian` | Implementación | ⬜️ |
-|[Ejercicio 5](#ejercicio-5) | `@Lucio` | Implementación | ⬜️ |
-|[Ejercicio 6](#ejercicio-6) | `@Lean` | Implementación| ⬜️ |
-|[Ejercicio 7](#ejercicio-7) | `@Mauri` | Implementación| ✅ |
-|[Ejercicio 8](#ejercicio-8) | `@Lean` | Implementación| ⬜️ |
-|[Ejercicio 9](#ejercicio-9) | `@Mauri` | Implementación| ✅ |
-|[Ejercicio 10](#ejercicio-10) | `@Demian` | Implementación| ⬜️ |
-|[Ejercicio 11](#ejercicio-11) | `@Mauri` | Implementación| ✅ |
-|[Ejercicio 12](#ejercicio-12) | `@Mauri` | Implementación| ⬜️ |
-|[Ejercicio 13](#ejercicio-13) | `@Lean` | Implementación| ⬜️ |
-|[Ejercicio 14](#ejercicio-14) | `@Demian` | Implementación| ⬜️ |
-|[Ejercicio 15](#ejercicio-15) | `@Lean` | Implementación| ⬜️ |
-|[Ejercicio 16](#ejercicio-16--avl) | `@Demian` | | ⬜️ |
-|[Ejercicio 17](#ejercicio-17--avl) | `@Lucio` | | ⬜️ |
-|[Ejercicio 18](#ejercicio-18--avl) | `@Lucio` | | ⬜️ |
-|[Ejercicio 19](#ejercicio-19--árbol-b-orden-4) | `@Lucio` | | ⬜️ |
-|[Ejercicio 20](#ejercicio-20--árbol-b-orden-5) | `@Lucio` | | ⬜️ |
+| Ejercicio                                      | Responsable | Tipo           | Completado |
+| ---------------------------------------------- | ----------- | -------------- | ---------- |
+| [Ejercicio 1](#ejercicio-1)                    | `@Lucio`    | Implementación | ✅          |
+| [Ejercicio 2](#ejercicio-2)                    | `@Demian`   | Implementación | ⬜️          |
+| [Ejercicio 3](#ejercicio-3)                    | `@Lucio`    | Implementación | ✅          |
+| [Ejercicio 4](#ejercicio-4)                    | `@Demian`   | Implementación | ⬜️          |
+| [Ejercicio 5](#ejercicio-5)                    | `@Lucio`    | Implementación | ✅          |
+| [Ejercicio 6](#ejercicio-6)                    | `@Lean`     | Implementación | ⬜️          |
+| [Ejercicio 7](#ejercicio-7)                    | `@Mauri`    | Implementación | ✅          |
+| [Ejercicio 8](#ejercicio-8)                    | `@Lean`     | Implementación | ⬜️          |
+| [Ejercicio 9](#ejercicio-9)                    | `@Mauri`    | Implementación | ✅          |
+| [Ejercicio 10](#ejercicio-10)                  | `@Demian`   | Implementación | ⬜️          |
+| [Ejercicio 11](#ejercicio-11)                  | `@Mauri`    | Implementación | ✅          |
+| [Ejercicio 12](#ejercicio-12)                  | `@Mauri`    | Implementación | ⬜️          |
+| [Ejercicio 13](#ejercicio-13)                  | `@Lean`     | Implementación | ⬜️          |
+| [Ejercicio 14](#ejercicio-14)                  | `@Demian`   | Implementación | ⬜️          |
+| [Ejercicio 15](#ejercicio-15)                  | `@Lean`     | Implementación | ⬜️          |
+| [Ejercicio 16](#ejercicio-16--avl)             | `@Demian`   | Uso            | ⬜️          |
+| [Ejercicio 17](#ejercicio-17--avl)             | `@Lucio`    | Uso            | ⬜️          |
+| [Ejercicio 18](#ejercicio-18--avl)             | `@Lucio`    | Uso            | ⬜️          |
+| [Ejercicio 19](#ejercicio-19--árbol-b-orden-4) | `@Lucio`    | Uso            | ⬜️          |
+| [Ejercicio 20](#ejercicio-20--árbol-b-orden-5) | `@Lucio`    | Uso            | ⬜️          |
 
 
 ---
@@ -228,19 +228,18 @@ h. Eliminar 62
 
 ### `ConjuntoEspecialTDA`
 ```java
-public interface ConjuntoEspecialTDA {
-  public class Respuesta {
-    public boolean error;
-    public int rta;
-  }
-
-  public void inicializarConjunto();
-  public Respuesta agregar(int valor);
-  public Respuesta sacar(int valor);
-  public Respuesta elegir();
-  public boolean pertenece(int valor);
-  public boolean conjuntoVacio();
+public interface ConjuntoEspecialTDA { 
+public class Respuesta { 
+public boolean error; 
+public int rta; 
 }
+public void inicializarConjunto(); //Inicializa el conjunto. 
+public Respuesta agregar(int valor); //Agrega un valor al conjunto. La Respuesta devuelve el error en true si no se agrega un nuevo valor, false si se agregó correctamente. 
+public Respuesta sacar(int valor); //Elimina un valor del conjunto. La Respuesta devuelve el error en true si no se realiza una eliminación, false si se eliminó el error. 
+public Respuesta elegir(); //Devuelve un valor del conjunto, si el conjunto no tenía valores, devuelve la Respuesta con error en true, en caso contrario la Respuesta contiene el error en false y en rta el valor.  
+public boolean pertenece(int valor); //Devuelve un booleano indicando si un valor pertenece al conjunto. 
+public boolean conjuntoVacio(); //Devuelve un booleano indicando si el conjunto está vacío o no. 
+} 
 ```
 
 ### `ConjuntoMamushkaTDA`
