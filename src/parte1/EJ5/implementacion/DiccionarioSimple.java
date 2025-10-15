@@ -1,4 +1,4 @@
-package parte1.EJ5;
+package parte1.EJ5.implementacion;
 
 import tda.ColaPrioridadTDA;
 import tda.DiccionarioSimpleTDA;

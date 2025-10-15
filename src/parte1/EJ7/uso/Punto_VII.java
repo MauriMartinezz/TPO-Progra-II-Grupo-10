@@ -1,4 +1,4 @@
-package parte1.EJ7;
+package parte1.EJ7.uso;
 
 import imple.Conjunto;
 import imple.Pila;

@@ -1,4 +1,5 @@
-package parte1.EJ5;
+package parte1.EJ5.interfaz;
+import parte1.EJ5.implementacion.DiccionarioSimple;
 import tda.DiccionarioSimpleTDA;
 
 public class TestDiccionarioSimple {

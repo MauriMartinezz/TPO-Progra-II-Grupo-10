@@ -1,4 +1,4 @@
-package parte1.EJ11;
+package parte1.EJ11.uso;
 
 import imple.Cola;
 import imple.DiccionarioMultiple;

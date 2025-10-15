@@ -1,4 +1,4 @@
-package parte1.EJ1;
+package parte1.EJ1.interfaz;
 
 // Interfaz ConjuntoEspecialTDA
 public interface ConjuntoEspecialTDA {

@@ -1,4 +1,4 @@
-package parte1.EJ3;
+package parte1.EJ3.interfaz;
 
 import tda.PilaTDA;
 

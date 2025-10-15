@@ -1,4 +1,4 @@
-package parte1.EJ9;
+package parte1.EJ9.uso;
 
 import imple.Cola;
 import imple.Conjunto;

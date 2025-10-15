@@ -1,7 +1,8 @@
-package parte1.EJ3;
+package parte1.EJ3.implementacion;
 
 import tda.PilaTDA;
 import imple.Pila;
+import parte1.EJ3.interfaz.MultiPilaTDA;
 
 public class MultiPila implements MultiPilaTDA {
     private PilaTDA multipila;

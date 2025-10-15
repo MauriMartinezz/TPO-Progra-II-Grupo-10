@@ -1,6 +1,7 @@
-package parte1.EJ1;
+package parte1.EJ1.Implementación;
 
 import imple.Conjunto; // suponiendo que la librería se llama lib y contiene ConjuntoTDA
+import parte1.EJ1.interfaz.ConjuntoEspecialTDA;
 
 public class ConjuntoEspecial implements ConjuntoEspecialTDA {
 

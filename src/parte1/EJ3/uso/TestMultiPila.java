@@ -1,7 +1,8 @@
-package parte1.EJ3;
+package parte1.EJ3.uso;
 
 
 import imple.Pila;
+import parte1.EJ3.implementacion.MultiPila;
 import tda.PilaTDA;
 
 public class TestMultiPila {
