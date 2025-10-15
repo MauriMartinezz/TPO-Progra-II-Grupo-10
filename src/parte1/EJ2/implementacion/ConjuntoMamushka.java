@@ -25,7 +25,7 @@ public class ConjuntoMamushka implements ConjuntoMamushkaTDA {
     @Override
     public int elegir( ){
 
-        
+        return 0;
     }; //muestra un elemento agregado al TDA (arbitrario) 
     
     @Override
@@ -39,6 +39,7 @@ public class ConjuntoMamushka implements ConjuntoMamushkaTDA {
     @Override
     public boolean estaVacio( ){
         
+        return true;
     }; //devuelve un boolean que informa si el TDA está 
     //vacío 
 

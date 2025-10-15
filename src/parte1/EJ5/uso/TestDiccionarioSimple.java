@@ -1,4 +1,5 @@
-package parte1.EJ5.interfaz;
+package parte1.EJ5.uso;
+
 import parte1.EJ5.implementacion.DiccionarioSimple;
 import tda.DiccionarioSimpleTDA;
 
