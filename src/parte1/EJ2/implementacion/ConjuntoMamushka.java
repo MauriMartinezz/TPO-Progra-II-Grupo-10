@@ -1,46 +1,37 @@
 package parte1.EJ2.implementacion;
 
+/* Se define un nuevo TDA denominado ConjuntoMamushkaTDA basado en 
+ConjuntoTDA, con la particularidad de que se permite más de una acepción de cada 
+elemento agregado. Tal cual como en ConjuntoTDA, no existe orden alguno. Su 
+especificación se muestra en el anexo, leer detenidamente los comentarios de cada método. */
+
 import parte1.EJ2.interfaz.ConjuntoMamushkaTDA;
 
 public class ConjuntoMamushka implements ConjuntoMamushkaTDA {
 
+   
     @Override
     public void inicializar( ){
-
-        
     }; //inicializa el TDA 
     
     @Override
-    public void guardar(int dato){
-
-        
+    public void guardar(int dato){  
     }; //agrega el elemento dato al TDA 
     
     @Override
-    public void sacar(int dato){
-
-        
+    public void sacar(int dato){  
     }; //elimina del TDA una acepción del elemento dato 
     
     @Override
     public int elegir( ){
-
-        return 0;
     }; //muestra un elemento agregado al TDA (arbitrario) 
     
     @Override
     public int perteneceCant(int dato){
-        int cant = 0;
-        
-        return cant;
-    };  //devuelve la cantidad de veces que se 
-    //encuentra el elemento dato en el TDA 
+    }; //devuelve la cantidad de veces que se encuentra el elemento dato en el TDA 
     
     @Override
     public boolean estaVacio( ){
-        
-        return true;
-    }; //devuelve un boolean que informa si el TDA está 
-    //vacío 
+    }; //devuelve un boolean que informa si el TDA está vacío 
 
 }
