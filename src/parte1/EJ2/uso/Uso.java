@@ -90,5 +90,6 @@ public class Uso {
         System.out.println("\tCant: " + conj.perteneceCant(7));
         System.out.println(1);
         System.out.println("\tCant: " + conj.perteneceCant(1));
+        
     }
 }
