@@ -9,29 +9,62 @@ import parte1.EJ2.interfaz.ConjuntoMamushkaTDA;
 
 public class ConjuntoMamushka implements ConjuntoMamushkaTDA {
 
+    private class Nodo { //la célula de la estructura
+		int info; //el valor almacenado
+		Nodo sig; //la referencia al siguiente nodo
+	}
+	
+	private Nodo c; //la referencia de la estructura
    
     @Override
     public void inicializar( ){
+        c = null;
     }; //inicializa el TDA 
     
     @Override
     public void guardar(int dato){  
+        Nodo nuevo = new Nodo(); //el nuevo nodo que se agregará
+		nuevo.info = dato;
+		nuevo.sig = c;
+		c = nuevo;
     }; //agrega el elemento dato al TDA 
     
     @Override
     public void sacar(int dato){  
+        if (c != null) {
+			if (c.info == dato) { //es el primero
+				c = c.sig;
+			} else { //es algún otro; lo buscamos
+				Nodo aux = c;
+				while (aux.sig != null && aux.sig.info != dato)
+					aux = aux.sig;
+				if (aux.sig != null) //encontrado
+					aux.sig = aux.sig.sig;
+			}
+		}
     }; //elimina del TDA una acepción del elemento dato 
     
     @Override
     public int elegir( ){
+        return c.info;
     }; //muestra un elemento agregado al TDA (arbitrario) 
     
     @Override
     public int perteneceCant(int dato){
+        Nodo aux = c;
+        int cant = 0;
+		while (aux != null){
+            if (aux.info == dato) {
+                cant++;
+            };
+			aux = aux.sig;
+        };
+		return cant;
     }; //devuelve la cantidad de veces que se encuentra el elemento dato en el TDA 
     
     @Override
     public boolean estaVacio( ){
+        return (c == null);
     }; //devuelve un boolean que informa si el TDA está vacío 
 
 }
