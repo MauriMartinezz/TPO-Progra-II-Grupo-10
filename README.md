@@ -9,9 +9,9 @@
 | [Ejercicio 3](#ejercicio-3)                    | `@Lucio`    | Implementación | ✅          |
 | [Ejercicio 4](#ejercicio-4)                    | `@Demian`   | Implementación | ⬜️          |
 | [Ejercicio 5](#ejercicio-5)                    | `@Lucio`    | Implementación | ✅          |
-| [Ejercicio 6](#ejercicio-6)                    | `@Lean`     | Implementación | ⬜️          |
+| [Ejercicio 6](#ejercicio-6)                    | `@Lean`     | Implementación | ✅          |
 | [Ejercicio 7](#ejercicio-7)                    | `@Mauri`    | Implementación | ✅          |
-| [Ejercicio 8](#ejercicio-8)                    | `@Lean`     | Implementación | ⬜️          |
+| [Ejercicio 8](#ejercicio-8)                    | `@Lean`     | Implementación | ✅          |
 | [Ejercicio 9](#ejercicio-9)                    | `@Mauri`    | Implementación | ✅          |
 | [Ejercicio 10](#ejercicio-10)                  | `@Demian`   | Implementación | ⬜️          |
 | [Ejercicio 11](#ejercicio-11)                  | `@Mauri`    | Implementación | ✅          |
