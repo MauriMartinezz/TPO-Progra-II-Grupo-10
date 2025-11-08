@@ -11,7 +11,7 @@
 | [Ejercicio 5](#ejercicio-5)                    | `@Lucio`    | Implementación | ✅          |
 | [Ejercicio 6](#ejercicio-6)                    | `@Mauri`    | Implementación | ✅          |
 | [Ejercicio 7](#ejercicio-7)                    | `@Mauri`    | Implementación | ✅          |
-| [Ejercicio 8](#ejercicio-8)                    | `@Mauri`    | Implementación | ✅          |
+| [Ejercicio 8](#ejercicio-8)                    | `@Lucio`    | Implementación | ✅          |
 | [Ejercicio 9](#ejercicio-9)                    | `@Mauri`    | Implementación | ✅          |
 | [Ejercicio 10](#ejercicio-10)                  | `@Demian`   | Implementación | ✅          |
 | [Ejercicio 11](#ejercicio-11)                  | `@Mauri`    | Implementación | ✅          |
