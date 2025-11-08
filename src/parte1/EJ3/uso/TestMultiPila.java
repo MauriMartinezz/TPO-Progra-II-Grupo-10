@@ -44,6 +44,7 @@ public class TestMultiPila {
     }
 
     private static void imprimirPila(PilaTDA p) {
+        // complejidad O(n)
         PilaTDA aux = new Pila();
         aux.inicializarPila();
         copiar(p, aux);
@@ -55,6 +56,7 @@ public class TestMultiPila {
     }
 
     private static void copiar(PilaTDA origen, PilaTDA destino) {
+        // complejidad O(n)
         PilaTDA temp = new Pila();
         temp.inicializarPila();
         while (!origen.pilaVacia()) {

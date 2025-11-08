@@ -9,9 +9,10 @@ elemento agregado. Tal cual como en ConjuntoTDA, no existe orden alguno. Su
 especificación se muestra en el anexo, leer detenidamente los comentarios de cada método.*/
 
 public class Uso {
-
     public static void llenarConjunto(ConjuntoMamushkaTDA C) {
+        // complejidad O(n) n=10
 
+        // llenamos el conjunto con 10 elementos aleatorios entre 0 y 10
         for(int i = 0; i < 10; ++i) {
             int elemento = (int)(Math.random() * 11.0);
             C.guardar(elemento);
@@ -20,7 +21,7 @@ public class Uso {
    }
 
     public static void vaciarConjunto(ConjuntoMamushkaTDA C) {
-
+        // complejidad O(n)
         while(!C.estaVacio()) {
             int elemento = C.elegir();
             C.sacar(elemento);
@@ -29,6 +30,7 @@ public class Uso {
    }
 
     public static ConjuntoMamushkaTDA copiarConjunto(ConjuntoMamushkaTDA C) {
+        // complejidad O(n)
       ConjuntoMamushkaTDA CCopia = new ConjuntoMamushka();
       ConjuntoMamushkaTDA CAux = new ConjuntoMamushka();
       CCopia.inicializar();
@@ -52,6 +54,7 @@ public class Uso {
    }
 
     public static void imprimirConjunto(ConjuntoMamushkaTDA conjunto) {
+        // complejidad O(n)
         ConjuntoMamushkaTDA conjuntoAux = new ConjuntoMamushka();
         conjuntoAux.inicializar();
 

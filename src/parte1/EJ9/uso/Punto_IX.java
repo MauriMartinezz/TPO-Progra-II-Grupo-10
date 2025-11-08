@@ -14,6 +14,7 @@ import utils.PilaUtils;
 //   → Comparar y guardar intersección.
 public class Punto_IX {
     public static ConjuntoTDA devolverElementosComunesPilaCola(PilaTDA pila, ColaTDA cola){
+        // complejidad O(n*m) polinomica donde n es la cantidad de elementos en la pila y m en la cola
         ConjuntoTDA conjuntoComunes = new Conjunto();
         conjuntoComunes.inicializarConjunto();
         

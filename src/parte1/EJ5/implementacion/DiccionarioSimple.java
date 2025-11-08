@@ -5,25 +5,34 @@ import tda.DiccionarioSimpleTDA;
 import imple.ColaPrioridad;
 import imple.Conjunto;
 
+/*
+ ### Ejercicio 5
+Se busca implementar un DiccionarioSimpleTDA usando únicamente una 
+ColaPrioridadTDA. Aclaración: se mantiene la interfaz de DiccionarioSimpleTDA; en la 
+implementación en vez de utilizar un arreglo de enteros (estructura estática) o una lista 
+enlazada (estructura dinámica), sólo puede usarse una ColaPrioridadTDA. 
+ */
 public class DiccionarioSimple implements DiccionarioSimpleTDA {
 
     private ColaPrioridadTDA cola;
 
     @Override
     public void inicializarDiccionario() {
+        // complejidad O(1)
         cola = new ColaPrioridad();
         cola.inicializarCola();
     }
 
     @Override
     public void agregar(int clave, int valor) {
-        // Si ya existe, eliminamos la clave anterior antes de agregar
+        // complejidad O(n)
         eliminar(clave);
         cola.acolarPrioridad(valor, clave); // valor = elemento, prioridad = clave
     }
 
     @Override
     public void eliminar(int clave) {
+        // complejidad O(n)
         ColaPrioridadTDA aux = new ColaPrioridad();
         aux.inicializarCola();
 
@@ -47,6 +56,7 @@ public class DiccionarioSimple implements DiccionarioSimpleTDA {
 
     @Override
     public int recuperar(int clave) {
+        // complejidad O(n)
         int resultado = 0;
         boolean encontrado = false;
 
@@ -81,6 +91,7 @@ public class DiccionarioSimple implements DiccionarioSimpleTDA {
 
     @Override
     public Conjunto claves() {
+        // complejidad O(n)
         Conjunto conjunto = new Conjunto();
         conjunto.inicializarConjunto();
 

@@ -4,22 +4,41 @@ import tda.PilaTDA;
 import imple.Pila;
 import parte1.EJ3.interfaz.MultiPilaTDA;
 
+/*
+ ### Ejercicio 3
+Se define un nuevo TDA denominado MultiPilaTDA basado en PilaTDA, con la 
+particularidad de recibir una PilaTDA por parámetro al apilar (la misma debe apilarse a 
+continuación de la multipila), y otra al desapilar (la misma debe chequear que los valores 
+tope de la multipila coincidan para desapilar, sino no debe hacer nada). Tanto en el método 
+apilar como en el método desapilar, ambas pilas vienen inicializadas y contienen cualquier 
+cantidad de elementos (incluso cero). El método tope devuelve una PilaTDA con los 
+primeros elementos de la multipila, se recibe por parámetro un número mayor o igual que 
+cero, que representa la cantidad de ellos (de recibir un número superior a la cantidad de 
+elementos de la multipila, debe devolver todos). Se solicita realizar la presente 
+implementación con el TDA ya visto PilaTDA, o en su defecto con estructuras dinámicas (no 
+puede realizarse la implementación con estructuras estáticas). Su especificación se muestra 
+en el anexo, leer detenidamente los comentarios de cada método.
+ */
+
 public class MultiPila implements MultiPilaTDA {
     private PilaTDA multipila;
 
     @Override
     public void inicializarPila() {
+        // complejidad O(1)
         multipila = new Pila();
         multipila.inicializarPila();
     }
 
     @Override
     public boolean pilaVacia() {
+        // complejidad O(1)
         return multipila.pilaVacia();
     }
 
     @Override
     public void apilar(PilaTDA valores) {
+        // complejidad O(n)
         PilaTDA aux = new Pila();
         aux.inicializarPila();
 
@@ -39,6 +58,7 @@ public class MultiPila implements MultiPilaTDA {
 
     @Override
     public void desapilar(PilaTDA valores) {
+        // complejidad O(n)
         PilaTDA auxMultipila = new Pila();
         PilaTDA auxValores = new Pila();
         auxMultipila.inicializarPila();
@@ -74,6 +94,7 @@ public class MultiPila implements MultiPilaTDA {
 
     @Override
     public PilaTDA tope(int cantidad) {
+        // complejidad O(n)
         PilaTDA resultado = new Pila();
         resultado.inicializarPila();
 
@@ -101,6 +122,7 @@ public class MultiPila implements MultiPilaTDA {
 
     // ---- Métodos auxiliares ----
     private void copiarPila(PilaTDA origen, PilaTDA destino) {
+        // complejidad O(n)
         PilaTDA aux = new Pila();
         aux.inicializarPila();
         while (!origen.pilaVacia()) {
@@ -117,6 +139,7 @@ public class MultiPila implements MultiPilaTDA {
     }
 
     private int contarElementos(PilaTDA pila) {
+        // complejidad O(n)
         int c = 0;
         PilaTDA aux = new Pila();
         aux.inicializarPila();

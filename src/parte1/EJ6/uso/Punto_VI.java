@@ -7,6 +7,7 @@ import tda.PilaTDA;
 // Se define un método que reciba una PilaTDA y devuelva un float (número real) con el porcentaje de cantidad de elementos pares de la pila.
 public class Punto_VI {
     public static float porcentajeDeParesPila(PilaTDA pila){
+        // complejidad O(n)
         PilaTDA pilaAux = utils.PilaUtils.copiarPila(pila);
         int cantPares = 0;
         int cantidadElementos = 0;

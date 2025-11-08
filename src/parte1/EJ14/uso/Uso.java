@@ -36,6 +36,7 @@ public class Uso {
     }
 
     public static ConjuntoTDA encontrarVerticesPuente(GrafoTDA g, int origen, int destino) {
+        // complejidad O(n) donde n es la cantidad de vertices en el grafo
         ConjuntoTDA puentes = new Conjunto();
         puentes.inicializarConjunto();
 

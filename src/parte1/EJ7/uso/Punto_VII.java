@@ -13,6 +13,7 @@ import utils.PilaUtils;
 public class Punto_VII {
 
     public static ConjuntoTDA devolverRepetidosPila(PilaTDA pila){
+        // complejidad O(n)
         ConjuntoTDA conjunto = new Conjunto();
         conjunto.inicializarConjunto();
 
