@@ -2,28 +2,28 @@
 
 ## Indice:
 
-| Ejercicio                                      | Responsable | Tipo           | Completado |
-| ---------------------------------------------- | ----------- | -------------- | ---------- |
+| Ejercicio                                      | Responsable | Tipo           | Completado  |
+| ---------------------------------------------- | ----------- | -------------- | ----------  |
 | [Ejercicio 1](#ejercicio-1)                    | `@Lucio`    | Implementación | ✅          |
-| [Ejercicio 2](#ejercicio-2)                    | `@Demian`   | Implementación | ⬜️          |
+| [Ejercicio 2](#ejercicio-2)                    | `@Demian`   | Implementación | ✅          |
 | [Ejercicio 3](#ejercicio-3)                    | `@Lucio`    | Implementación | ✅          |
-| [Ejercicio 4](#ejercicio-4)                    | `@Demian`   | Implementación | ⬜️          |
+| [Ejercicio 4](#ejercicio-4)                    | `@Demian`   | Implementación | ✅          |
 | [Ejercicio 5](#ejercicio-5)                    | `@Lucio`    | Implementación | ✅          |
 | [Ejercicio 6](#ejercicio-6)                    | `@Lean`     | Implementación | ⬜️          |
 | [Ejercicio 7](#ejercicio-7)                    | `@Mauri`    | Implementación | ✅          |
 | [Ejercicio 8](#ejercicio-8)                    | `@Lean`     | Implementación | ⬜️          |
 | [Ejercicio 9](#ejercicio-9)                    | `@Mauri`    | Implementación | ✅          |
-| [Ejercicio 10](#ejercicio-10)                  | `@Demian`   | Implementación | ⬜️          |
+| [Ejercicio 10](#ejercicio-10)                  | `@Demian`   | Implementación | ✅          |
 | [Ejercicio 11](#ejercicio-11)                  | `@Mauri`    | Implementación | ✅          |
 | [Ejercicio 12](#ejercicio-12)                  | `@Mauri`    | Implementación | ⬜️          |
 | [Ejercicio 13](#ejercicio-13)                  | `@Lean`     | Implementación | ⬜️          |
 | [Ejercicio 14](#ejercicio-14)                  | `@Demian`   | Implementación | ⬜️          |
 | [Ejercicio 15](#ejercicio-15)                  | `@Lean`     | Implementación | ⬜️          |
-| [Ejercicio 16](#ejercicio-16--avl)             | `@Demian`   | Uso            | ⬜️          |
-| [Ejercicio 17](#ejercicio-17--avl)             | `@Lucio`    | Uso            | ⬜️          |
-| [Ejercicio 18](#ejercicio-18--avl)             | `@Lucio`    | Uso            | ⬜️          |
-| [Ejercicio 19](#ejercicio-19--árbol-b-orden-4) | `@Lucio`    | Uso            | ⬜️          |
-| [Ejercicio 20](#ejercicio-20--árbol-b-orden-5) | `@Lucio`    | Uso            | ⬜️          |
+| [Ejercicio 16](#ejercicio-16--avl)             | `@Demian`   | Uso            | ✅          |
+| [Ejercicio 17](#ejercicio-17--avl)             | `@Lucio`    | Uso            | ✅          |
+| [Ejercicio 18](#ejercicio-18--avl)             | `@Lucio`    | Uso            | ✅          |
+| [Ejercicio 19](#ejercicio-19--árbol-b-orden-4) | `@Lucio`    | Uso            | ✅          |
+| [Ejercicio 20](#ejercicio-20--árbol-b-orden-5) | `@Lucio`    | Uso            | ✅          |
 
 ---
 ## Primera parte
