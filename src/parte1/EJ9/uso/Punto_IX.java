@@ -11,7 +11,6 @@ import utils.ConjuntoUtils;
 import utils.PilaUtils;
 
 //   Definir un método que reciba una `PilaTDA` y una `ColaTDA`, devolviendo un `ConjuntoTDA` con los **elementos comunes**.  
-//   → Comparar y guardar intersección.
 public class Punto_IX {
     public static ConjuntoTDA devolverElementosComunesPilaCola(PilaTDA pila, ColaTDA cola){
         // complejidad O(n*m) polinomica donde n es la cantidad de elementos en la pila y m en la cola
@@ -55,8 +54,8 @@ public class Punto_IX {
         ColaTDA cola = new Cola();
         cola.inicializarCola();
 
-        PilaUtils.rellenarPila(pila, 10, 10);
-        ColaUtils.rellenarCola(cola,10,10);
+        PilaUtils.rellenarPila(pila, 5, 10);
+        ColaUtils.rellenarCola(cola,5,10);
 
         System.out.println("**************************");
         System.out.println("PILA: ");
@@ -66,7 +65,6 @@ public class Punto_IX {
         System.out.println("**************************");
         System.out.println("COLA: ");
         ColaUtils.imprimirCola(cola);
-        System.out.println("**************************");
         
         System.out.println("**************************");
         System.out.println("COMUNES ENTRE COLA Y PILA: ");

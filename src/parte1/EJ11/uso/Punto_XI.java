@@ -1,35 +1,38 @@
 package parte1.EJ11.uso;
 
 import imple.Cola;
+import imple.Conjunto;
 import imple.DiccionarioMultiple;
 import tda.ColaTDA;
 import tda.ConjuntoTDA;
 import tda.DiccionarioMultipleTDA;
 
-//   Definir un método que reciba un `DiccionarioMultipleTDA` y devuelva una `ColaTDA` con todos los **valores sin repetición**.  
-//   → Recorrer claves, recopilar valores y eliminar duplicados.
+//   Se define un método que reciba un DiccionarioMultipleTDA y devuelva una ColaTDA con todos los valores del diccionario, sin ninguna repetición.
 public class Punto_XI {
 
     public static ColaTDA obtenerValoresUnicos(DiccionarioMultipleTDA diccionario) {
-        // Complejidad: P
+        // Complejidad: O(n*m) donde n es la cantidad de claves y m la cantidad de valores por clave
         ColaTDA valoresUnicosCola = new Cola();
         valoresUnicosCola.inicializarCola();
         ConjuntoTDA claves = diccionario.claves();
         DiccionarioMultipleTDA diccionarioAux = utils.DiccionarioMultipleUtils.copiarDM(diccionario);
+
+        ConjuntoTDA valoresDiccionario = new Conjunto();
+        valoresDiccionario.inicializarConjunto();
 
         while (!claves.conjuntoVacio()) {
             int clave = claves.elegir();
             ConjuntoTDA valoresConLaClave = diccionarioAux.recuperar(clave);
 
             while (!valoresConLaClave.conjuntoVacio()) {
-                int valor = valoresConLaClave.elegir();
-
-                if (!utils.ColaUtils.existeElementoEnCola(valoresUnicosCola, clave)) {
-                    valoresUnicosCola.acolar(valor);
-                }
-                valoresConLaClave.sacar(valor);
+                    int valor = valoresConLaClave.elegir();
+                    if(!valoresDiccionario.pertenece(valor)){
+                        valoresUnicosCola.acolar(valor);
+                        valoresDiccionario.agregar(valor);
+                    }
+                    valoresConLaClave.sacar(valor);
+                    claves.sacar(clave);
             }
-            claves.sacar(clave);
         }
 
         return valoresUnicosCola;

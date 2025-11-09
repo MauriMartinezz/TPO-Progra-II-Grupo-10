@@ -2,6 +2,7 @@ package parte1.EJ6.uso;
 
 import imple.Pila;
 import tda.PilaTDA;
+import utils.PilaUtils;
 
 // Ejercicio 6
 // Se define un método que reciba una PilaTDA y devuelva un float (número real) con el porcentaje de cantidad de elementos pares de la pila.
@@ -22,10 +23,10 @@ public class Punto_VI {
     public static void main(String[] args) {
         PilaTDA pila = new Pila();
         pila.inicializarPila();
-        utils.PilaUtils.rellenarPila(pila, 10, 50);
+        PilaUtils.rellenarPila(pila, 10, 50);
         System.out.println("****************************");
         System.out.println("PILA: ");
-        utils.PilaUtils.imprimirPila(pila);
+        PilaUtils.imprimirPila(pila);
         System.out.println("****************************");
 
         System.out.println("****************************");
