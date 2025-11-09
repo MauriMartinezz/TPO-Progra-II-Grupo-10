@@ -10,12 +10,13 @@ import tda.PilaTDA;
 Se define un método que reciba una PilaTDA y devuelva un DiccionarioSimpleTDA, 
 en el cual se guardarán los elementos de la pila como claves, y la cantidad de apariciones de 
 dicho elemento en la pila, como valores.
- */
- 
+*/
+
 
 public class Uso {
 
     public static DiccionarioMultipleTDA Metodo(PilaTDA pila) {
+        // complejidad O(n^2) polinomica
 
         DiccionarioMultipleTDA dic = new DiccionarioMultiple();
         dic.inicializarDiccionario();
@@ -36,11 +37,8 @@ public class Uso {
                 }
 
                 dic.agregar(elemento, contador);
-
             }
-
         }
-
         return dic;
     }
 
@@ -53,7 +51,7 @@ public class Uso {
 
         // Mostrar la pila inicial
         System.out.println("Pila inicial:");
-        utils.PilaUtils.imprimirPila(pila);  
+        utils.PilaUtils.imprimirPila(pila);
 
         // Mostrar el diccionario resultante
         System.out.println("Diccionario Multiple resultante:");

@@ -11,41 +11,39 @@ import imple.Conjunto;
 
 public class DiccionarioSimpleMod implements DiccionarioSimpleModTDA {
     
-    private class NodoClave { //la célula de la estructura de claves
-		int clave; //la clave
-		int valor; //el valor
+    private class NodoClave {
+		int clave;
+		int valor;
         int modificaciones;
-		NodoClave sigClave; //la referencia a la siguiente clave
+		NodoClave sigClave;
 	}
 	
-	private NodoClave origen; //la referencia de la estructura
+	private NodoClave origen;
 	
     @Override  
     public void inicializarDiccionario(){
+		//complejidad O(1)
         origen = null;
-    }; //inicializa el TDA 
+    };
     
     @Override  
     public void agregar(int clave, int valor){
+		//complejidad O(n)
 		NodoClave nc = Clave2NodoClave(clave);
-		if (nc == null) { //la clave no existe
+		if (nc == null) {
 			nc = new NodoClave();
 			nc.clave = clave;
             nc.modificaciones = 0;
 			nc.sigClave = origen;
-			origen = nc; //nuevo origen
+			origen = nc;
 		}
 		nc.valor = valor;       
         nc.modificaciones++;
-    }; //agrega el par clave-valor al TDA, 
-    //conjuntamente con la cantidad de veces que dicho valor se vio 
-    //modificado. Si la clave se agrega por primera vez, el factor de 
-    //modificaciones será 0. Si la clave se agrega por segunda vez, 
-    //modificándose el valor, el factor de 
-    //modificaciones será 1. Y así sucesivamente. 
+    };
     
     private NodoClave Clave2NodoClave(int clave){
-		NodoClave aux = origen; //el nodo viajero
+		//complejidad O(n)
+		NodoClave aux = origen;
 		while (aux != null && aux.clave != clave) {
 			aux = aux.sigClave;
 		}
@@ -54,6 +52,7 @@ public class DiccionarioSimpleMod implements DiccionarioSimpleModTDA {
 
     @Override  
     public void eliminar(int clave){
+		//complejidad O(n)
 		if (origen != null) {
 			if (origen.clave == clave) { //es el primero
 				origen = origen.sigClave;
@@ -68,34 +67,33 @@ public class DiccionarioSimpleMod implements DiccionarioSimpleModTDA {
 				}
 			}
 		}
-	}; //elimina la clave del TDA, con su valor y 
-    //factor de modificaciones 
+	};
     
     @Override  
     public int recuperar(int clave){
+		// complejidad O(n)
 		NodoClave nc = Clave2NodoClave(clave);
 		return nc.valor;
-    }; //devuelve el valor asociado a la clave, que 
-    //se supone existente 
+    };
     
     @Override  
     public int recuperarMod(int clave){
+		// complejidad O(n)
 		NodoClave nc = Clave2NodoClave(clave);
 		return nc.modificaciones;
-    }; //devuelve la cantidad de 
-    //modificaciones que sufrió el valor relacionado a dicha clave, que se 
-    //supone existente 
+    };
     
     @Override  
     public ConjuntoTDA claves(){
+		// complejidad O(n)
         ConjuntoTDA c = new Conjunto();
 		c.inicializarConjunto();
-		NodoClave aux = origen; //el nodo viajero
+		NodoClave aux = origen;
 		while (aux != null) {
 			c.agregar(aux.clave);
 			aux = aux.sigClave;
 		}
 		return c;
-    }; //devuelve el conjunto de claves 
+    };
 
 }

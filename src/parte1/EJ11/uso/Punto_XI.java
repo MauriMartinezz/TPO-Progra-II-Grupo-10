@@ -10,6 +10,7 @@ import tda.DiccionarioMultipleTDA;
 public class Punto_XI {
 
     public static ColaTDA obtenerValoresUnicos(DiccionarioMultipleTDA diccionario){
+        // complejidad O(n^2) polinomica
         ColaTDA valoresUnicosCola = new Cola();
         valoresUnicosCola.inicializarCola();
 

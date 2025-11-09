@@ -1,6 +1,6 @@
 package parte1.EJ1.Implementación;
 
-import imple.Conjunto; // suponiendo que la librería se llama lib y contiene ConjuntoTDA
+import imple.Conjunto;
 import parte1.EJ1.interfaz.ConjuntoEspecialTDA;
 
 public class ConjuntoEspecial implements ConjuntoEspecialTDA {
@@ -9,12 +9,14 @@ public class ConjuntoEspecial implements ConjuntoEspecialTDA {
 
     @Override
     public void inicializarConjunto() {
+        // complejidad O(1)
         conjunto = new Conjunto();
         conjunto.inicializarConjunto();
     }
 
     @Override
     public Respuesta agregar(int valor) {
+        // complejidad O(n) debido a la operación pertenece()
         Respuesta res = new Respuesta();
         if (!conjunto.pertenece(valor)) {
             conjunto.agregar(valor);
@@ -27,6 +29,7 @@ public class ConjuntoEspecial implements ConjuntoEspecialTDA {
 
     @Override
     public Respuesta sacar(int valor) {
+        // complejidad O(n) debido a la operación pertenece()
         Respuesta res = new Respuesta();
         if (conjunto.pertenece(valor)) {
             conjunto.sacar(valor);
@@ -39,6 +42,7 @@ public class ConjuntoEspecial implements ConjuntoEspecialTDA {
 
     @Override
     public Respuesta elegir() {
+        // complejidad O(1)
         Respuesta res = new Respuesta();
         if (!conjunto.conjuntoVacio()) {
             res.rta = conjunto.elegir();
@@ -51,11 +55,13 @@ public class ConjuntoEspecial implements ConjuntoEspecialTDA {
 
     @Override
     public boolean pertenece(int valor) {
+        // complejidad O(n)
         return conjunto.pertenece(valor);
     }
 
     @Override
     public boolean conjuntoVacio() {
+        // complejidad O(1)
         return conjunto.conjuntoVacio();
     }
 }

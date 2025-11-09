@@ -17,12 +17,14 @@ public class ConjuntoMamushka implements ConjuntoMamushkaTDA {
 	private Nodo c; //la referencia de la estructura
    
     @Override
-    public void inicializar( ){
+    public void inicializar(){
+        //complejidad O(1)
         c = null;
     }; //inicializa el TDA 
     
     @Override
     public void guardar(int dato){  
+        //complejidad O(1)
         Nodo nuevo = new Nodo(); //el nuevo nodo que se agregará
 		nuevo.info = dato;
 		nuevo.sig = c;
@@ -30,7 +32,8 @@ public class ConjuntoMamushka implements ConjuntoMamushkaTDA {
     }; //agrega el elemento dato al TDA 
     
     @Override
-    public void sacar(int dato){  
+    public void sacar(int dato){ 
+        //complejidad O(n)
         if (c != null) {
 			if (c.info == dato) { //es el primero
 				c = c.sig;
@@ -45,12 +48,14 @@ public class ConjuntoMamushka implements ConjuntoMamushkaTDA {
     }; //elimina del TDA una acepción del elemento dato 
     
     @Override
-    public int elegir( ){
+    public int elegir(){
+        //complejidad O(1)
         return c.info;
     }; //muestra un elemento agregado al TDA (arbitrario) 
     
     @Override
     public int perteneceCant(int dato){
+        //complejidad O(n)
         Nodo aux = c;
         int cant = 0;
 		while (aux != null){
@@ -64,6 +69,7 @@ public class ConjuntoMamushka implements ConjuntoMamushkaTDA {
     
     @Override
     public boolean estaVacio( ){
+        //complejidad O(1)
         return (c == null);
     }; //devuelve un boolean que informa si el TDA está vacío 
 
