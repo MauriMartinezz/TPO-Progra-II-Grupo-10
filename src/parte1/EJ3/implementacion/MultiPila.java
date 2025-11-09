@@ -19,6 +19,7 @@ implementación con el TDA ya visto PilaTDA, o en su defecto con estructuras din
 puede realizarse la implementación con estructuras estáticas). Su especificación se muestra 
 en el anexo, leer detenidamente los comentarios de cada método.
  */
+// PENDIENTE IMPLEMENTAR
 
 public class MultiPila implements MultiPilaTDA {
     private PilaTDA multipila;
