@@ -52,6 +52,5 @@ public class Uso {
         ColaTDA valoresUnicos = obtenerValoresUnicos(diccionario);
         utils.ColaUtils.imprimirCola(valoresUnicos);
         System.out.println("**********************");
-
     }
 }
