@@ -29,16 +29,18 @@ public class DiccionarioSimpleMod implements DiccionarioSimpleModTDA {
     @Override  
     public void agregar(int clave, int valor){
 		//complejidad O(n)
-		NodoClave nc = Clave2NodoClave(clave);
-		if (nc == null) {
+		NodoClave nc = Clave2NodoClave(clave); //busco si ya existe la clave
+		if (nc == null) { //la clave no existe
 			nc = new NodoClave();
 			nc.clave = clave;
             nc.modificaciones = 0;
 			nc.sigClave = origen;
 			origen = nc;
 		}
-		nc.valor = valor;       
-        nc.modificaciones++;
+		else {
+			nc.modificaciones++; //la clave ya existe, incremento el contador de modificaciones
+		}
+		nc.valor = valor; //asigno el nuevo valor
     };
     
     private NodoClave Clave2NodoClave(int clave){
