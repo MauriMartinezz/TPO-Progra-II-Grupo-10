@@ -2,6 +2,7 @@ package parte1.EJ8.uso;
 
 import imple.Cola;
 import tda.ColaTDA;
+import utils.ColaUtils;
 
 // Se define un método que reciba una ColaTDA y devuelva una nueva ColaTDA con los 
 // elementos de la original, sin ninguna repetición. Se debe dejar el primer representante de 
@@ -9,13 +10,28 @@ import tda.ColaTDA;
 // original.
 
 public class Punto_VIII {
-    public static ColaTDA colaSinRepetir(ColaTDA cola){
+    public static boolean existeElementoEnCola(ColaTDA cola, int elemento){
+        boolean existe = false;
         ColaTDA colaAux = utils.ColaUtils.copiarCola(cola);
+
+        // recorrer mientras queden elementos y no se haya encontrado el elemento
+        while(!colaAux.colaVacia() && !existe){
+            if(colaAux.primero() == elemento) existe = true;
+            colaAux.desacolar();
+        }
+
+        return existe;
+    }
+    public static ColaTDA colaSinRepetir(ColaTDA cola){
+        ColaTDA colaAux = ColaUtils.copiarCola(cola);
         ColaTDA colaSinRepetidos = new Cola();
         colaSinRepetidos.inicializarCola();
 
         while(!colaAux.colaVacia()){
-            if(colaAux.)
+            // comprobar si el elemento ya fue añadido a la cola resultado
+            if(!existeElementoEnCola(colaSinRepetidos, colaAux.primero())){
+                colaSinRepetidos.acolar(colaAux.primero());
+            }
             colaAux.desacolar();
         }
         return colaSinRepetidos;
@@ -23,8 +39,15 @@ public class Punto_VIII {
     public static void main(String[] args) {
         ColaTDA cola = new Cola();
         cola.inicializarCola();
-
-        utils.ColaUtils.rellenarCola(cola, 10, 10);
-
+        System.out.println("**********************");
+        System.out.println("COLA ORIGINAL: ");
+        utils.ColaUtils.rellenarCola(cola,10, 10);
+        utils.ColaUtils.imprimirCola(cola);
+        System.out.println("**********************");
+        
+        System.out.println("COLA SIN REPETIDOS: ");
+        ColaTDA colaSinRepetidos = colaSinRepetir(cola);
+        utils.ColaUtils.imprimirCola(colaSinRepetidos);
+        System.out.println("**********************");
     }
 }
