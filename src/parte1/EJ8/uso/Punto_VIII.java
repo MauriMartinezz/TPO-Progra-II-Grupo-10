@@ -10,18 +10,7 @@ import utils.ColaUtils;
 // original.
 
 public class Punto_VIII {
-    public static boolean existeElementoEnCola(ColaTDA cola, int elemento){
-        boolean existe = false;
-        ColaTDA colaAux = utils.ColaUtils.copiarCola(cola);
 
-        // recorrer mientras queden elementos y no se haya encontrado el elemento
-        while(!colaAux.colaVacia() && !existe){
-            if(colaAux.primero() == elemento) existe = true;
-            colaAux.desacolar();
-        }
-
-        return existe;
-    }
     public static ColaTDA colaSinRepetir(ColaTDA cola){
         ColaTDA colaAux = ColaUtils.copiarCola(cola);
         ColaTDA colaSinRepetidos = new Cola();
@@ -29,7 +18,7 @@ public class Punto_VIII {
 
         while(!colaAux.colaVacia()){
             // comprobar si el elemento ya fue añadido a la cola resultado
-            if(!existeElementoEnCola(colaSinRepetidos, colaAux.primero())){
+            if(!ColaUtils.existeElementoEnCola(colaSinRepetidos, colaAux.primero())){
                 colaSinRepetidos.acolar(colaAux.primero());
             }
             colaAux.desacolar();

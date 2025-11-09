@@ -51,4 +51,17 @@ public class ColaUtils {
 
         return Colacopia;
     }
+
+        public static boolean existeElementoEnCola(ColaTDA cola, int elemento){
+        boolean existe = false;
+        ColaTDA colaAux = utils.ColaUtils.copiarCola(cola);
+
+        // recorrer mientras queden elementos y no se haya encontrado el elemento
+        while(!colaAux.colaVacia() && !existe){
+            if(colaAux.primero() == elemento) existe = true;
+            colaAux.desacolar();
+        }
+
+        return existe;
+    }
 }
