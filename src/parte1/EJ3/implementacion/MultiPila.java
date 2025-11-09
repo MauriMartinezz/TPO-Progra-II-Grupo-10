@@ -48,28 +48,26 @@ public class MultiPila implements MultiPilaTDA {
 
         // chequear si la pila ingresada por parametro coincide con los elementos tope de la multipila
         PilaTDA aux = utils.PilaUtils.copiarPila(valores);
-        boolean coincide = true;
-        while (!valores.pilaVacia() && actual != null) {
-            aux.apilar(valores.tope());
-            valores.desapilar();
+        boolean coincide = true;   
+        while (actual != null && !aux.pilaVacia()) {
             if (actual.info != aux.tope()) {
                 coincide = false;
-            } else {
-                actual = actual.sig;
             }
+            actual = actual.sig;
+            aux.desapilar();
         }
-
-        if (coincide){
-            while (!valores.pilaVacia() && actual != null) { // mientras coincida y queden elementos en valores y en la multipila
-                if (actual.info != valores.tope()) {
-                    coincide = false;
-                } else {
-                    valores.desapilar();
-                    actual = actual.sig;
-                }
+        if (coincide) {
+            // desapilar los elementos de la multipila
+            actual = primero;
+            while (!valores.pilaVacia() && actual != null) {
+                primero = primero.sig; // mueve el tope hacia abajo
+                actual = actual.sig;
+                valores.desapilar();
+            
             }
         }
     }
+
 
     public boolean pilaVacia() {
         return (primero == null);
@@ -88,16 +86,15 @@ public class MultiPila implements MultiPilaTDA {
             contador++;
         }
 
-        return resultado;
 
-        // Invertir la pila para mantener el orden original (depende de la interpretación)
-        // PilaTDA invertida = new Pila();
-        // invertida.inicializarPila();
-        // while (!resultado.pilaVacia()) {
-        //     invertida.apilar(resultado.tope());
-        //     resultado.desapilar();
-        // }
+        //Invertir la pila para mantener el orden original (depende de la interpretación)
+        PilaTDA invertida = new Pila();
+        invertida.inicializarPila();
+        while (!resultado.pilaVacia()) {
+             invertida.apilar(resultado.tope());
+             resultado.desapilar();
+        }
 
-        // return invertida;
+        return invertida;
     }
 }

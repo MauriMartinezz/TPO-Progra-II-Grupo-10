@@ -34,24 +34,24 @@ public class TestMultiPila {
         utils.PilaUtils.imprimirPila(mp.tope(10));
 
 
-        // Crear pila para desapilar: (tope) 1 - 9 (debería fallar porque no coincide con el tope actual que es 3,5)
+        // Crear pila para desapilar: (tope) 1 - 9 (debería fallar porque no coincide con el tope actual que es 9,1)
         PilaTDA desap = new Pila();
         desap.inicializarPila();
-        desap.apilar(9);
-        desap.apilar(1);
+        desap.apilar(3);
+        desap.apilar(5);
         mp.desapilar(desap);
 
-        System.out.println("Despues de desapilar:");
+        System.out.println("Despues de desapilar (fallido):");
         utils.PilaUtils.imprimirPila(mp.tope(5));
 
-        // Crear pila para desapilar: (tope) 3 - 5 - 7 (debería funcionar)
+        // Crear pila para desapilar: (tope) 9 - 1 - 7 (debería funcionar)
         PilaTDA desap2 = new Pila();
         desap2.inicializarPila();
-        desap2.apilar(3);
-        desap2.apilar(5);
         desap2.apilar(7);
+        desap2.apilar(1);
+        desap2.apilar(9);
         mp.desapilar(desap2);
-        System.out.println("Despues de desapilar:");
+        System.out.println("Despues de desapilar (correcto):");
         utils.PilaUtils.imprimirPila(mp.tope(5));
     }
 }
