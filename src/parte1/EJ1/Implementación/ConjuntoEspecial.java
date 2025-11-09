@@ -18,7 +18,7 @@ public class ConjuntoEspecial implements ConjuntoEspecialTDA {
     public Respuesta agregar(int valor) {
         // complejidad O(n) debido a la operación pertenece()
         Respuesta res = new Respuesta();
-        if (!conjunto.pertenece(valor)) {
+        if (!conjunto.pertenece(valor)) { //si el valor ya pertenecía, mando error
             conjunto.agregar(valor);
             res.error = false;
         } else {
@@ -31,7 +31,7 @@ public class ConjuntoEspecial implements ConjuntoEspecialTDA {
     public Respuesta sacar(int valor) {
         // complejidad O(n) debido a la operación pertenece()
         Respuesta res = new Respuesta();
-        if (conjunto.pertenece(valor)) {
+        if (conjunto.pertenece(valor)) { //si el valor no pertenece, mando error
             conjunto.sacar(valor);
             res.error = false;
         } else {
@@ -45,6 +45,7 @@ public class ConjuntoEspecial implements ConjuntoEspecialTDA {
         // complejidad O(1)
         Respuesta res = new Respuesta();
         if (!conjunto.conjuntoVacio()) {
+            // elegir un elemento cualquiera del conjunto con random
             res.rta = conjunto.elegir();
             res.error = false;
         } else {

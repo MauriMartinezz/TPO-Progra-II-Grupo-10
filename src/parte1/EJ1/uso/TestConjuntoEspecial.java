@@ -1,12 +1,12 @@
 package parte1.EJ1.uso;
 
-import parte1.EJ1.Implementación.ConjuntoEspecial;
+import parte1.EJ1.Implementación.ConjuntoEspecial_anexo;
 import parte1.EJ1.interfaz.ConjuntoEspecialTDA;
 
 public class TestConjuntoEspecial {
 
     public static void main(String[] args) {
-        ConjuntoEspecial ce = new ConjuntoEspecial();
+        ConjuntoEspecial_anexo ce = new ConjuntoEspecial_anexo();
         ce.inicializarConjunto();
 
         ConjuntoEspecialTDA.Respuesta r;
