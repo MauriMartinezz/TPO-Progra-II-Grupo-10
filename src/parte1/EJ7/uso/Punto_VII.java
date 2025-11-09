@@ -6,9 +6,8 @@ import tda.ConjuntoTDA;
 import tda.PilaTDA;
 import utils.ConjuntoUtils;
 import utils.PilaUtils;
-//     - **Ejercicio 7 (uso)**  
+//     Ejercicio 7  
 //     Definir un método que reciba una `PilaTDA` y devuelva un `ConjuntoTDA` con los **elementos repetidos**.  
-//   → Detectar duplicados y agregarlos al conjunto.
 
 public class Punto_VII {
 
@@ -16,13 +15,17 @@ public class Punto_VII {
         // complejidad O(n)
         ConjuntoTDA conjunto = new Conjunto();
         conjunto.inicializarConjunto();
+        ConjuntoTDA conjuntoRepetidos = new Conjunto();
+        conjuntoRepetidos.inicializarConjunto();
 
         PilaTDA pilaAux = new Pila();
         pilaAux.inicializarPila();
 
-
         while(!pila.pilaVacia()){
-            conjunto.agregar(pila.tope());
+            if(conjunto.pertenece(pila.tope())){
+                conjuntoRepetidos.agregar(pila.tope());
+            }
+            conjunto.agregar(pila.tope()); 
             pilaAux.apilar(pila.tope());
             pila.desapilar();
         }
@@ -32,7 +35,7 @@ public class Punto_VII {
             pilaAux.desapilar();
         }
 
-        return conjunto;
+        return conjuntoRepetidos;
     }
 
     public static void main(String[] args) {
@@ -49,7 +52,7 @@ public class Punto_VII {
         ConjuntoTDA conjuntoPilaSinRepetidos = devolverRepetidosPila(pila);
 
         System.out.println("***********************");
-        System.out.println("Elementos de la PILA SIN REPETIDOS:");
+        System.out.println("Conjunto de la PILA SIN REPETIDOS:");
         System.out.println("_______________________");
         ConjuntoUtils.imprimirConjunto(conjuntoPilaSinRepetidos);
         System.out.println("***********************");
