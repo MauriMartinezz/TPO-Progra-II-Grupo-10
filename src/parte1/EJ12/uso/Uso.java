@@ -18,9 +18,14 @@ public class Uso {
         arbol.agregarElem(40);
         arbol.agregarElem(65);
         arbol.agregarElem(80);  
+
+        System.out.print("Elementos del ABB (preorden): ");
+        imprimirArbol(arbol);
+        System.out.println();
         
         int sumaImpares = sumarImpares(arbol);
         System.out.println("La suma de los elementos impares del ABB es: " + sumaImpares);
+
     }
 
     public static int sumarImpares(ABBTDA a) {
@@ -38,7 +43,16 @@ public class Uso {
             }
         }
     }
+
+    public static void imprimirArbol(ABBTDA a) {
+        // complejidad O(n)
+        if (!a.arbolVacio()) 
+            System.out.print(a.raiz() + " ");
+            imprimirArbol(a.hijoIzq());
+            imprimirArbol(a.hijoDer());
+        }
 }
+
 
 /*
  * El arbol se vería así:
