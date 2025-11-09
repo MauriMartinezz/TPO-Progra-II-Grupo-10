@@ -27,6 +27,7 @@ public class DiccionarioSimple implements DiccionarioSimpleTDA {
     public void agregar(int clave, int valor) {
         // complejidad O(n)
         eliminar(clave);
+        // clave no existe, seguimos
         cola.acolarPrioridad(valor, clave); // valor = elemento, prioridad = clave
     }
 
@@ -63,7 +64,7 @@ public class DiccionarioSimple implements DiccionarioSimpleTDA {
         ColaPrioridadTDA aux = new ColaPrioridad();
         aux.inicializarCola();
 
-        while (!cola.colaVacia()) {
+        while (!cola.colaVacia()) { //recorremos la cola
             int val = cola.primero();
             int pri = cola.prioridad();
             cola.desacolar();
@@ -84,7 +85,7 @@ public class DiccionarioSimple implements DiccionarioSimpleTDA {
         }
 
         if (!encontrado)
-            throw new RuntimeException("Clave no encontrada: " + clave);
+            return 0; //o Throw new Exception("Clave no encontrada");
 
         return resultado;
     }

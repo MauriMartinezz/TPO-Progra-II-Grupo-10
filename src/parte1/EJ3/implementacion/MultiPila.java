@@ -19,142 +19,85 @@ implementación con el TDA ya visto PilaTDA, o en su defecto con estructuras din
 puede realizarse la implementación con estructuras estáticas). Su especificación se muestra 
 en el anexo, leer detenidamente los comentarios de cada método.
  */
-// PENDIENTE IMPLEMENTAR
 
 public class MultiPila implements MultiPilaTDA {
-    private PilaTDA multipila;
+    private class Nodo { // la célula de la estructura
+        int info; // el valor almacenado
+        Nodo sig; // la referencia al siguiente nodo
+    }
 
-    @Override
+    private Nodo primero; // la referencia a la estructura
+
     public void inicializarPila() {
-        // complejidad O(1)
-        multipila = new Pila();
-        multipila.inicializarPila();
+        primero = null;
     }
 
-    @Override
-    public boolean pilaVacia() {
-        // complejidad O(1)
-        return multipila.pilaVacia();
-    }
-
-    @Override
-    public void apilar(PilaTDA valores) {
-        // complejidad O(n)
-        PilaTDA aux = new Pila();
-        aux.inicializarPila();
-
-        while (!valores.pilaVacia()) {
-            int x = valores.tope();
-            valores.desapilar();
-            aux.apilar(x);
-        }
-
-        while (!aux.pilaVacia()) {
-            int x = aux.tope();
-            aux.desapilar();
-            multipila.apilar(x);
-            valores.apilar(x); // restauramos la pila original
+    public void apilar(PilaTDA x) { // el nuevo elemento se agrega al inicio
+        while (!x.pilaVacia()) {
+            Nodo nuevo = new Nodo();
+            nuevo.info = x.tope();
+            x.desapilar();
+            nuevo.sig = primero;
+            primero = nuevo;
         }
     }
 
-    @Override
     public void desapilar(PilaTDA valores) {
-        // complejidad O(n)
-        PilaTDA auxMultipila = new Pila();
-        PilaTDA auxValores = new Pila();
-        auxMultipila.inicializarPila();
-        auxValores.inicializarPila();
+        // desapilar (la misma debe chequear que los valores tope de la multipila coincidan para desapilar, sino no debe hacer nada)
+        Nodo actual = primero;
 
-        copiarPila(multipila, auxMultipila);
-        copiarPila(valores, auxValores);
-
+        // chequear si la pila ingresada por parametro coincide con los elementos tope de la multipila
+        PilaTDA aux = utils.PilaUtils.copiarPila(valores);
         boolean coincide = true;
-
-        while (!auxValores.pilaVacia() && coincide) {
-            if (auxMultipila.pilaVacia()) {
+        while (!valores.pilaVacia() && actual != null) {
+            aux.apilar(valores.tope());
+            valores.desapilar();
+            if (actual.info != aux.tope()) {
                 coincide = false;
-                break;
-            }
-            int v = auxValores.tope();
-            int m = auxMultipila.tope();
-            if (v == m) {
-                auxValores.desapilar();
-                auxMultipila.desapilar();
             } else {
-                coincide = false;
+                actual = actual.sig;
             }
         }
 
-        if (coincide) {
-            int cantidad = contarElementos(valores);
-            for (int i = 0; i < cantidad; i++) {
-                multipila.desapilar();
+        if (coincide){
+            while (!valores.pilaVacia() && actual != null) { // mientras coincida y queden elementos en valores y en la multipila
+                if (actual.info != valores.tope()) {
+                    coincide = false;
+                } else {
+                    valores.desapilar();
+                    actual = actual.sig;
+                }
             }
         }
     }
 
-    @Override
+    public boolean pilaVacia() {
+        return (primero == null);
+    }
+
     public PilaTDA tope(int cantidad) {
-        // complejidad O(n)
-        PilaTDA resultado = new Pila();
+        PilaTDA resultado = new Pila(); // pila auxiliar para almacenar el resultado
         resultado.inicializarPila();
 
-        PilaTDA aux = new Pila();
-        aux.inicializarPila();
-
+        Nodo actual = primero;
         int contador = 0;
 
-        while (!multipila.pilaVacia() && (cantidad == 0 || contador < cantidad)) {
-            int x = multipila.tope();
-            multipila.desapilar();
-            aux.apilar(x);
+        while (actual != null && contador < cantidad) {
+            resultado.apilar(actual.info);
+            actual = actual.sig; // avanza en el nodo
             contador++;
         }
 
-        while (!aux.pilaVacia()) {
-            int x = aux.tope();
-            aux.desapilar();
-            resultado.apilar(x);
-            multipila.apilar(x);
-        }
-
         return resultado;
-    }
 
-    // ---- Métodos auxiliares ----
-    private void copiarPila(PilaTDA origen, PilaTDA destino) {
-        // complejidad O(n)
-        PilaTDA aux = new Pila();
-        aux.inicializarPila();
-        while (!origen.pilaVacia()) {
-            int x = origen.tope();
-            origen.desapilar();
-            aux.apilar(x);
-        }
-        while (!aux.pilaVacia()) {
-            int x = aux.tope();
-            aux.desapilar();
-            destino.apilar(x);
-            origen.apilar(x);
-        }
-    }
+        // Invertir la pila para mantener el orden original (depende de la interpretación)
+        // PilaTDA invertida = new Pila();
+        // invertida.inicializarPila();
+        // while (!resultado.pilaVacia()) {
+        //     invertida.apilar(resultado.tope());
+        //     resultado.desapilar();
+        // }
 
-    private int contarElementos(PilaTDA pila) {
-        // complejidad O(n)
-        int c = 0;
-        PilaTDA aux = new Pila();
-        aux.inicializarPila();
-        while (!pila.pilaVacia()) {
-            int x = pila.tope();
-            pila.desapilar();
-            aux.apilar(x);
-            c++;
-        }
-        while (!aux.pilaVacia()) {
-            int x = aux.tope();
-            aux.desapilar();
-            pila.apilar(x);
-        }
-        return c;
+        // return invertida;
     }
 }

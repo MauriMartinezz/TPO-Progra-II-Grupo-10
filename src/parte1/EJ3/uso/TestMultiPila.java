@@ -29,46 +29,29 @@ public class TestMultiPila {
         mp.apilar(A);
 
         System.out.println("Tope(5) -> ");
-        imprimirPila(mp.tope(5));
+        utils.PilaUtils.imprimirPila(mp.tope(5));
+        System.out.println("Tope(10) -> ");
+        utils.PilaUtils.imprimirPila(mp.tope(10));
 
-        // Crear pila para desapilar: (tope) 1 - 9
+
+        // Crear pila para desapilar: (tope) 1 - 9 (debería fallar porque no coincide con el tope actual que es 3,5)
         PilaTDA desap = new Pila();
         desap.inicializarPila();
         desap.apilar(9);
         desap.apilar(1);
-
         mp.desapilar(desap);
 
         System.out.println("Despues de desapilar:");
-        imprimirPila(mp.tope(5));
-    }
+        utils.PilaUtils.imprimirPila(mp.tope(5));
 
-    private static void imprimirPila(PilaTDA p) {
-        // complejidad O(n)
-        PilaTDA aux = new Pila();
-        aux.inicializarPila();
-        copiar(p, aux);
-        while (!aux.pilaVacia()) {
-            System.out.print(aux.tope() + " ");
-            aux.desapilar();
-        }
-        System.out.println();
-    }
-
-    private static void copiar(PilaTDA origen, PilaTDA destino) {
-        // complejidad O(n)
-        PilaTDA temp = new Pila();
-        temp.inicializarPila();
-        while (!origen.pilaVacia()) {
-            int x = origen.tope();
-            origen.desapilar();
-            temp.apilar(x);
-        }
-        while (!temp.pilaVacia()) {
-            int x = temp.tope();
-            temp.desapilar();
-            destino.apilar(x);
-            origen.apilar(x);
-        }
+        // Crear pila para desapilar: (tope) 3 - 5 - 7 (debería funcionar)
+        PilaTDA desap2 = new Pila();
+        desap2.inicializarPila();
+        desap2.apilar(3);
+        desap2.apilar(5);
+        desap2.apilar(7);
+        mp.desapilar(desap2);
+        System.out.println("Despues de desapilar:");
+        utils.PilaUtils.imprimirPila(mp.tope(5));
     }
 }
