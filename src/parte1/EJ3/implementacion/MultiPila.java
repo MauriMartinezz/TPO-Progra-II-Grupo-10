@@ -33,7 +33,8 @@ public class MultiPila implements MultiPilaTDA {
     }
 
     public void apilar(PilaTDA x) { // el nuevo elemento se agrega al inicio
-        while (!x.pilaVacia()) {
+        // complejidad O(n)
+        while (!x.pilaVacia()) { // si la pila pasada como parametro está vacía, no hace nada
             Nodo nuevo = new Nodo();
             nuevo.info = x.tope();
             x.desapilar();
@@ -43,6 +44,8 @@ public class MultiPila implements MultiPilaTDA {
     }
 
     public void desapilar(PilaTDA valores) {
+        // complejidad O(n)
+
         // desapilar (la misma debe chequear que los valores tope de la multipila coincidan para desapilar, sino no debe hacer nada)
         Nodo actual = primero;
 
@@ -74,6 +77,7 @@ public class MultiPila implements MultiPilaTDA {
     }
 
     public PilaTDA tope(int cantidad) {
+        // complejidad O(n)
         PilaTDA resultado = new Pila(); // pila auxiliar para almacenar el resultado
         resultado.inicializarPila();
 
