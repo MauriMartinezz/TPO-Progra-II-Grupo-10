@@ -1,6 +1,3 @@
-# Ignorar configuración local de VS Code
 .vscode/
-# Ignorar metadatos del entorno (por ejemplo Eclipse)
 .metadata/
-# Ignorar binarios o archivos compilados
 bin/
