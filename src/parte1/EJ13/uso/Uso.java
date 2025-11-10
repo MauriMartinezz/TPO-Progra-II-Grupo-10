@@ -23,11 +23,7 @@ public class Uso {
     }
 
     public static int sumarPares(ABBTDA a) {
-<<<<<<< HEAD
-        // complejidad O(n) donde n es la cantidad de nodos en el árbol
-=======
         // Se uso recursividad
->>>>>>> bd1e3a784c165e321862cdb006c595cf473a77ec
         if (a.arbolVacio()) {
             return 0; // Caso base: árbol vacío
         } else {
