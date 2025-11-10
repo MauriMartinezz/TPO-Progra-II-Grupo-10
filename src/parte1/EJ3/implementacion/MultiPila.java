@@ -72,6 +72,7 @@ public class MultiPila implements MultiPilaTDA {
 
 
     public boolean pilaVacia() {
+        // complejidad O(1)
         return (primero == null);
     }
 

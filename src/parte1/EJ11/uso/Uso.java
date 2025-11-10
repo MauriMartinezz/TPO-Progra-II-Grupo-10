@@ -10,7 +10,7 @@ import tda.DiccionarioMultipleTDA;
 /* ### Ejercicio 11
 Se define un método que reciba un DiccionarioMultipleTDA y devuelva una ColaTDA con todos los valores del diccionario, sin ninguna repetición.
  */
-public class Punto_XI {
+public class Uso {
 
     public static ColaTDA obtenerValoresUnicos(DiccionarioMultipleTDA diccionario) {
         // Complejidad: O(n*m) donde n es la cantidad de claves y m la cantidad de valores por clave

@@ -15,7 +15,7 @@ dicho elemento en la pila, como valores.
 public class Uso {
 
     public static DiccionarioMultipleTDA Metodo(PilaTDA pila) {
-        // complejidad O(n^2) polinomica
+        // complejidad O(n*m) polinomica
 
         DiccionarioMultipleTDA dic = new DiccionarioMultiple();
         dic.inicializarDiccionario();

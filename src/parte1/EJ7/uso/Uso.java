@@ -13,7 +13,7 @@ Se define un método que reciba una PilaTDA y devuelva un ConjuntoTDA con los el
 public class Uso {
 
     public static ConjuntoTDA devolverRepetidosPila(PilaTDA pila){
-        // complejidad O(n)
+        // complejidad O(n*m)
         ConjuntoTDA conjunto = new Conjunto();
         conjunto.inicializarConjunto();
         ConjuntoTDA conjuntoRepetidos = new Conjunto();

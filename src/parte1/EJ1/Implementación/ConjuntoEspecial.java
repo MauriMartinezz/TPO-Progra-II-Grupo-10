@@ -16,11 +16,13 @@ public class ConjuntoEspecial implements ConjuntoEspecialTDA {
     private int cant;
 
     public void inicializarConjunto() {
+        //complejidad O(1)
         this.a = new int[100];
         this.cant = 0;
     }
 
     public Respuesta agregar(int x) {
+        //complejidad O(n)
         Respuesta res = new Respuesta();
         if (!this.pertenece(x)) {
             this.a[this.cant] = x;
@@ -34,10 +36,12 @@ public class ConjuntoEspecial implements ConjuntoEspecialTDA {
     }
 
     public boolean conjuntoVacio() {
+        // complejidad O(1)
         return this.cant == 0;
     }
 
     public Respuesta elegir() {
+        //complejidad O(1)
         Respuesta res = new Respuesta();
         if (!this.conjuntoVacio()) {
             int max = this.cant - 1;
@@ -52,6 +56,7 @@ public class ConjuntoEspecial implements ConjuntoEspecialTDA {
     }
 
     public boolean pertenece(int x) {
+        // complejidad O(n)
         int i;
         for (i = 0; i < this.cant && this.a[i] != x; ++i) {
         }
@@ -59,6 +64,7 @@ public class ConjuntoEspecial implements ConjuntoEspecialTDA {
     }
 
     public Respuesta sacar(int x) {
+        //complejidad O(n)
         Respuesta res = new Respuesta();
         if (this.pertenece(x)) {
             int i;

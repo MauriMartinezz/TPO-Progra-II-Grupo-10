@@ -34,7 +34,7 @@ public class Uso {
     }
 
     public static int calcularGrado(GrafoTDA g, int vertice) {
-        // complejidad O(n) donde n es la cantidad de vertices en el grafo
+        // complejidad O(n*m)
         int salientes = 0;
         int entrantes = 0;
 
