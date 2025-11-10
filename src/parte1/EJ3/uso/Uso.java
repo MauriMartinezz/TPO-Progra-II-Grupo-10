@@ -34,7 +34,7 @@ public class Uso {
         utils.PilaUtils.imprimirPila(mp.tope(10));
 
 
-        // Crear pila para desapilar: (tope) 1 - 9 (debería fallar porque no coincide con el tope actual que es 9,1)
+        // Crear pila para desapilar: (tope) 5 - 3 (debería fallar porque no coincide con el tope actual que es 9,1)
         PilaTDA desap = new Pila();
         desap.inicializarPila();
         desap.apilar(3);

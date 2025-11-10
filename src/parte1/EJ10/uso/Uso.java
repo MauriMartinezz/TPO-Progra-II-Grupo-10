@@ -47,7 +47,7 @@ public class Uso {
         // Crear y rellenar la pila
         PilaTDA pila = new Pila();
         pila.inicializarPila();
-        utils.PilaUtils.rellenarPila(pila, 10, 3);
+        utils.PilaUtils.rellenarPila(pila, 10, 2);
 
         // Mostrar la pila inicial
         System.out.println("Pila inicial:");

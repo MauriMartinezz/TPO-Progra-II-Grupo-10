@@ -10,12 +10,17 @@ public class Uso {
         dic.inicializarDiccionario();
 
         dic.agregar(1, 100);
+        System.out.println("agregar clave 1 con valor 100");
         dic.agregar(2, 200);
+        System.out.println("agregar clave 2 con valor 200");
         dic.agregar(3, 300);
+        System.out.println("agregar clave 3 con valor 300");
 
         System.out.println("Recuperar clave 2: " + dic.recuperar(2)); // Espera 200
         
         dic.agregar(1, 150); // Actualiza valor de clave 1
+        System.out.println("Actualizar clave 1 con valor 150");
+
         System.out.println("Recuperar clave 1 después de actualizar: " + dic.recuperar(1)); // Espera 150
         
         dic.agregar(4, 400);
