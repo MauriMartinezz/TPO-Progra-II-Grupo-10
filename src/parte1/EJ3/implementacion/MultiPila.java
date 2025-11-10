@@ -90,7 +90,6 @@ public class MultiPila implements MultiPilaTDA {
             contador++;
         }
 
-
         //Invertir la pila para mantener el orden original (depende de la interpretación)
         PilaTDA invertida = new Pila();
         invertida.inicializarPila();

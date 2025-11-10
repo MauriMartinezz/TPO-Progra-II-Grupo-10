@@ -16,7 +16,7 @@ public class Uso {
         GrafoTDA grafo = new Grafo();
         grafo.inicializarGrafo();
 
-        // Agregar vértices
+        // Agregar vértices 1,2,3,4,5
         for (int i = 1; i <= 5; i++) {
             grafo.agregarVertice(i);
         }
@@ -42,8 +42,8 @@ public class Uso {
         ConjuntoTDA puentes = new Conjunto();
         puentes.inicializarConjunto();
 
-        ConjuntoTDA vertices = g.vertices();
-        while (!vertices.conjuntoVacio()) { // recorrer los vertices
+        ConjuntoTDA vertices = g.vertices(); //creamos un conjunto con todos los vertices del grafo
+        while (!vertices.conjuntoVacio()) { // procesamos cada uno de los vertices
             int vertice = vertices.elegir();
             if (g.existeArista(origen, vertice) && g.existeArista(vertice, destino)) { // es puente?
                 puentes.agregar(vertice); // agregar al conjunto de puentes

@@ -30,7 +30,7 @@ public class Uso {
                     int valor = valoresConLaClave.elegir();
                     if(!valoresDiccionario.pertenece(valor)){ // si el valor no está en el conjunto de valores ya agregados
                         valoresUnicosCola.acolar(valor); 
-                        valoresDiccionario.agregar(valor);
+                        valoresDiccionario.agregar(valor); // si el valor ya fue agregado, no se vuelve a agregar porque es un conjunto
                     }
                     valoresConLaClave.sacar(valor);
                     claves.sacar(clave);
