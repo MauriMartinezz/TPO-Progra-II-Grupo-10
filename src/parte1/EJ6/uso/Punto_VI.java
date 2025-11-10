@@ -4,16 +4,10 @@ import imple.Pila;
 import tda.PilaTDA;
 import utils.PilaUtils;
 
-<<<<<<< HEAD:src/parte1/EJ6/uso/Punto_VI.java
 /* ### Ejercicio 6
 Se define un método que reciba una PilaTDA y devuelva un float (número real) con el porcentaje de cantidad de elementos pares de la pila.
 */
 public class Punto_VI {
-=======
-// Ejercicio 6
-// Se define un método que reciba una PilaTDA y devuelva un float (número real) con el porcentaje de cantidad de elementos pares de la pila.
-public class Uso {
->>>>>>> bd1e3a784c165e321862cdb006c595cf473a77ec:src/parte1/EJ6/uso/Uso.java
     public static float porcentajeDeParesPila(PilaTDA pila){
         // complejidad O(n)
         PilaTDA pilaAux = utils.PilaUtils.copiarPila(pila);
