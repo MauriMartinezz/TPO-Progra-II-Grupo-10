@@ -30,8 +30,9 @@ public class Uso {
         ConjuntoTDA puentes = encontrarVerticesPuente(grafo, 1, 3);
         System.out.println("Vértices puente entre 1 y 3:");
         while (!puentes.conjuntoVacio()) {
-            System.out.println(puentes.elegir());
-            puentes.sacar(puentes.elegir());
+            int valor = puentes.elegir();
+            System.out.println(valor);
+            puentes.sacar(valor);
         }
     }
 
@@ -59,9 +60,9 @@ El grafo se vería así:
      / \
    2/   \4
    /     \
- (2)-----(4)
+ (2)     (4)
    \3   / 
-    \ /  
+    \ / 6 
     (3)
       \
        \5
