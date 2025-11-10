@@ -9,7 +9,7 @@ import utils.PilaUtils;
 //     Ejercicio 7  
 //     Definir un método que reciba una `PilaTDA` y devuelva un `ConjuntoTDA` con los **elementos repetidos**.  
 
-public class Punto_VII {
+public class Uso {
 
     public static ConjuntoTDA devolverRepetidosPila(PilaTDA pila){
         // complejidad O(n)

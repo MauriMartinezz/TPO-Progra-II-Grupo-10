@@ -5,7 +5,7 @@ import imple.Pila;
 import parte1.EJ3.implementacion.MultiPila;
 import tda.PilaTDA;
 
-public class TestMultiPila {
+public class Uso {
     public static void main(String[] args) {
         MultiPila mp = new MultiPila();
         mp.inicializarPila();

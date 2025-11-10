@@ -3,7 +3,7 @@ package parte1.EJ5.uso;
 import parte1.EJ5.implementacion.DiccionarioSimple;
 import tda.DiccionarioSimpleTDA;
 
-public class TestDiccionarioSimple {
+public class Uso {
 
     public static void main(String[] args) {
         DiccionarioSimpleTDA dic = new DiccionarioSimple();

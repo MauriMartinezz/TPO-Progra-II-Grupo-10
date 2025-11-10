@@ -72,8 +72,8 @@ El grafo se vería así:
      |  \3_  / 
      |     \ /6  
       \_   (3)
-         \
-          \5
+         \  |
+          \5|7
           (5)
 Grado del vértice 3: -1 (2 aristas entrantes: de 2 y 4; 1 arista saliente: a 5)
  */

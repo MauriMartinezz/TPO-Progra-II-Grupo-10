@@ -11,7 +11,7 @@ import utils.ConjuntoUtils;
 import utils.PilaUtils;
 
 //   Definir un método que reciba una `PilaTDA` y una `ColaTDA`, devolviendo un `ConjuntoTDA` con los **elementos comunes**.  
-public class Punto_IX {
+public class Uso {
     public static ConjuntoTDA devolverElementosComunesPilaCola(PilaTDA pila, ColaTDA cola){
         // complejidad O(n*m) polinomica donde n es la cantidad de elementos en la pila y m en la cola
         ConjuntoTDA conjuntoComunes = new Conjunto();
