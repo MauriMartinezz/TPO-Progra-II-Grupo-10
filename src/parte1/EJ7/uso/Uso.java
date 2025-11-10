@@ -10,7 +10,7 @@ import utils.PilaUtils;
 Se define un método que reciba una PilaTDA y devuelva un ConjuntoTDA con los elementos repetidos de la pila.
 */
 
-public class Punto_VII {
+public class Uso {
 
     public static ConjuntoTDA devolverRepetidosPila(PilaTDA pila){
         // complejidad O(n)

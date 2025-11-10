@@ -10,10 +10,15 @@ import utils.ColaUtils;
 import utils.ConjuntoUtils;
 import utils.PilaUtils;
 
+<<<<<<< HEAD:src/parte1/EJ9/uso/Punto_IX.java
 /* ### Ejercicio 9
 Se define un método que reciba una PilaTDA y una ColaTDA y devuelva un ConjuntoTDA con los elementos comunes de la pila y de la cola.
 */
 public class Punto_IX {
+=======
+//   Definir un método que reciba una `PilaTDA` y una `ColaTDA`, devolviendo un `ConjuntoTDA` con los **elementos comunes**.  
+public class Uso {
+>>>>>>> bd1e3a784c165e321862cdb006c595cf473a77ec:src/parte1/EJ9/uso/Uso.java
     public static ConjuntoTDA devolverElementosComunesPilaCola(PilaTDA pila, ColaTDA cola){
         // complejidad O(n*m) polinomica donde n es la cantidad de elementos en la pila y m en la cola
         ConjuntoTDA conjuntoComunes = new Conjunto();

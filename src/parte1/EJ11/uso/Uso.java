@@ -7,10 +7,15 @@ import tda.ColaTDA;
 import tda.ConjuntoTDA;
 import tda.DiccionarioMultipleTDA;
 
+<<<<<<< HEAD:src/parte1/EJ11/uso/Punto_XI.java
 /* ### Ejercicio 11
 Se define un método que reciba un DiccionarioMultipleTDA y devuelva una ColaTDA con todos los valores del diccionario, sin ninguna repetición.
  */
 public class Punto_XI {
+=======
+//   Se define un método que reciba un DiccionarioMultipleTDA y devuelva una ColaTDA con todos los valores del diccionario, sin ninguna repetición.
+public class Uso {
+>>>>>>> bd1e3a784c165e321862cdb006c595cf473a77ec:src/parte1/EJ11/uso/Uso.java
 
     public static ColaTDA obtenerValoresUnicos(DiccionarioMultipleTDA diccionario) {
         // Complejidad: O(n*m) donde n es la cantidad de claves y m la cantidad de valores por clave

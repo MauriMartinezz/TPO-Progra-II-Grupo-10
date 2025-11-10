@@ -11,7 +11,7 @@ cada uno de los repetidos, respetando el orden en que aparecen todos los element
 original.
 */
 
-public class Punto_VIII {
+public class Uso {
 
     public static ColaTDA colaSinRepetir(ColaTDA cola){
         ColaTDA colaAux = ColaUtils.copiarCola(cola);

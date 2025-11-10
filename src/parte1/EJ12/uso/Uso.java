@@ -24,7 +24,7 @@ public class Uso {
     }
 
     public static int sumarImpares(ABBTDA a) {
-        // complejidad O(n)
+        // Se uso recursividad
         if (a.arbolVacio()) {
             return 0; // Caso base: árbol vacío
         } else {
