@@ -1,4 +1,8 @@
 # Trabajo Práctico Obligatorio - Programación II (2025)
+### Grupo 10
+- Lucio Petrucci (`@Lucio`)
+- Demian Burna (`@Demian`)
+- Mauricio Martinez (`@Mauri`)
 
 ## Indice:
 
