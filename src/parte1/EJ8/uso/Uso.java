@@ -14,9 +14,8 @@ original.
 public class Uso {
 
     public static ColaTDA colaSinRepetir(ColaTDA cola){
-`
         //complejidad O(n*m)
-        
+
         ColaTDA colaAux = ColaUtils.copiarCola(cola);
         ColaTDA colaSinRepetidos = new Cola();
         colaSinRepetidos.inicializarCola();
