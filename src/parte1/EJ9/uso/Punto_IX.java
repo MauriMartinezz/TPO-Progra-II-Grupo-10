@@ -10,7 +10,9 @@ import utils.ColaUtils;
 import utils.ConjuntoUtils;
 import utils.PilaUtils;
 
-//   Definir un método que reciba una `PilaTDA` y una `ColaTDA`, devolviendo un `ConjuntoTDA` con los **elementos comunes**.  
+/* ### Ejercicio 9
+Se define un método que reciba una PilaTDA y una ColaTDA y devuelva un ConjuntoTDA con los elementos comunes de la pila y de la cola.
+*/
 public class Punto_IX {
     public static ConjuntoTDA devolverElementosComunesPilaCola(PilaTDA pila, ColaTDA cola){
         // complejidad O(n*m) polinomica donde n es la cantidad de elementos en la pila y m en la cola

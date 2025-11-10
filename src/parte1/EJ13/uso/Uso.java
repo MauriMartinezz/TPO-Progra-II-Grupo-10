@@ -1,8 +1,7 @@
 package parte1.EJ13.uso;
 import imple.ABB;
 import tda.ABBTDA;
-/*
-### Ejercicio 13
+/* ### Ejercicio 13
 Se define un método que calcule la cantidad de hojas con un valor par de un ABB.
 */
 public class Uso {
@@ -24,7 +23,7 @@ public class Uso {
     }
 
     public static int sumarPares(ABBTDA a) {
-        // complejidad O(n)
+        // complejidad O(n) donde n es la cantidad de nodos en el árbol
         if (a.arbolVacio()) {
             return 0; // Caso base: árbol vacío
         } else {

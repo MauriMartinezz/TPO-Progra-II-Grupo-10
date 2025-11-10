@@ -4,8 +4,7 @@ import tda.PilaTDA;
 import imple.Pila;
 import parte1.EJ3.interfaz.MultiPilaTDA;
 
-/*
- ### Ejercicio 3
+/* ### Ejercicio 3
 Se define un nuevo TDA denominado MultiPilaTDA basado en PilaTDA, con la 
 particularidad de recibir una PilaTDA por parámetro al apilar (la misma debe apilarse a 
 continuación de la multipila), y otra al desapilar (la misma debe chequear que los valores 

@@ -4,10 +4,12 @@ import imple.Cola;
 import tda.ColaTDA;
 import utils.ColaUtils;
 
-// Se define un método que reciba una ColaTDA y devuelva una nueva ColaTDA con los 
-// elementos de la original, sin ninguna repetición. Se debe dejar el primer representante de 
-// cada uno de los repetidos, respetando el orden en que aparecen todos los elementos en la 
-// original.
+/* ### Ejercicio 8
+Se define un método que reciba una ColaTDA y devuelva una nueva ColaTDA con los
+elementos de la original, sin ninguna repetición. Se debe dejar el primer representante de
+cada uno de los repetidos, respetando el orden en que aparecen todos los elementos en la
+original.
+*/
 
 public class Punto_VIII {
 

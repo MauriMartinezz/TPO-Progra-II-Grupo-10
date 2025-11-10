@@ -1,8 +1,7 @@
 package parte1.EJ12.uso;
 import imple.ABB;
 import tda.ABBTDA;
-/*
-### Ejercicio 12
+/* ### Ejercicio 12
 Se define un método que calcule la suma de los elementos con un valor impar de un ABB. 
 */
 public class Uso {

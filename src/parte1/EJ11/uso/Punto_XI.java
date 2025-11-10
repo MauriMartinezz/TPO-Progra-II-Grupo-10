@@ -7,7 +7,9 @@ import tda.ColaTDA;
 import tda.ConjuntoTDA;
 import tda.DiccionarioMultipleTDA;
 
-//   Se define un método que reciba un DiccionarioMultipleTDA y devuelva una ColaTDA con todos los valores del diccionario, sin ninguna repetición.
+/* ### Ejercicio 11
+Se define un método que reciba un DiccionarioMultipleTDA y devuelva una ColaTDA con todos los valores del diccionario, sin ninguna repetición.
+ */
 public class Punto_XI {
 
     public static ColaTDA obtenerValoresUnicos(DiccionarioMultipleTDA diccionario) {
