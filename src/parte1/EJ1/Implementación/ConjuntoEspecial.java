@@ -1,68 +1,75 @@
-package parte1.EJ1.Implementación;
+//implementación completa de Conjunto
 
-import imple.Conjunto;
+/* ### Ejercicio 1
+Se define un nuevo TDA denominado ConjuntoEspecialTDA basado en ConjuntoTDA,
+con la particularidad de permitir determinar si las operaciones se realizan correctamente,
+o no. Algunos de sus métodos devuelven el objeto Respuesta, que contiene dos elementos:
+un booleano que determina la correctitud de ejecución y un entero que informa lo solicitado
+por el método en sí, si el método lo requiere y su ejecución fue satisfactoria. Su especificación
+se muestra en el anexo, leer detenidamente los comentarios de cada método.
+ */
+package parte1.EJ1.Implementación;
 import parte1.EJ1.interfaz.ConjuntoEspecialTDA;
 
 public class ConjuntoEspecial implements ConjuntoEspecialTDA {
+    private int[] a;
+    private int cant;
 
-    private Conjunto conjunto;
-
-    @Override
     public void inicializarConjunto() {
-        // complejidad O(1)
-        conjunto = new Conjunto();
-        conjunto.inicializarConjunto();
+        this.a = new int[100];
+        this.cant = 0;
     }
 
-    @Override
-    public Respuesta agregar(int valor) {
-        // complejidad O(n) debido a la operación pertenece()
+    public Respuesta agregar(int x) {
         Respuesta res = new Respuesta();
-        if (!conjunto.pertenece(valor)) { //si el valor ya pertenecía, mando error
-            conjunto.agregar(valor);
+        if (!this.pertenece(x)) {
+            this.a[this.cant] = x;
+            ++this.cant;
             res.error = false;
         } else {
             res.error = true;
         }
         return res;
+
     }
 
-    @Override
-    public Respuesta sacar(int valor) {
-        // complejidad O(n) debido a la operación pertenece()
-        Respuesta res = new Respuesta();
-        if (conjunto.pertenece(valor)) { //si el valor no pertenece, mando error
-            conjunto.sacar(valor);
-            res.error = false;
-        } else {
-            res.error = true;
-        }
-        return res;
-    }
-
-    @Override
-    public Respuesta elegir() {
-        // complejidad O(1)
-        Respuesta res = new Respuesta();
-        if (!conjunto.conjuntoVacio()) {
-            // elegir un elemento cualquiera del conjunto con random
-            res.rta = conjunto.elegir();
-            res.error = false;
-        } else {
-            res.error = true;
-        }
-        return res;
-    }
-
-    @Override
-    public boolean pertenece(int valor) {
-        // complejidad O(n)
-        return conjunto.pertenece(valor);
-    }
-
-    @Override
     public boolean conjuntoVacio() {
-        // complejidad O(1)
-        return conjunto.conjuntoVacio();
+        return this.cant == 0;
+    }
+
+    public Respuesta elegir() {
+        Respuesta res = new Respuesta();
+        if (!this.conjuntoVacio()) {
+            int max = this.cant - 1;
+            int min = 0;
+            int pos = (int) (Math.random() * (double) (max - min + 1) + (double) min);
+            res.rta = this.a[pos];
+            res.error = false;
+        } else {
+            res.error = true;
+        }
+        return res;
+    }
+
+    public boolean pertenece(int x) {
+        int i;
+        for (i = 0; i < this.cant && this.a[i] != x; ++i) {
+        }
+        return i < this.cant;
+    }
+
+    public Respuesta sacar(int x) {
+        Respuesta res = new Respuesta();
+        if (this.pertenece(x)) {
+            int i;
+            for (i = 0; i < this.cant && this.a[i] != x; ++i) {
+            }
+            this.a[i] = this.a[this.cant - 1];
+            --this.cant;
+            res.error = false;
+        } else {
+            res.error = true;
+        }
+        return res;
     }
 }

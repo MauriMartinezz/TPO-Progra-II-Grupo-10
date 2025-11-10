@@ -1,4 +1,8 @@
 # Trabajo Práctico Obligatorio - Programación II (2025)
+### Grupo 10
+- Lucio Petrucci (`@Lucio`)
+- Demian Burna (`@Demian`)
+- Mauricio Martinez (`@Mauri`)
 
 ## Indice:
 
@@ -34,7 +38,7 @@ con la particularidad de permitir determinar si las operaciones se realizan corr
 o no. Algunos de sus métodos devuelven el objeto Respuesta, que contiene dos elementos: 
 un booleano que determina la correctitud de ejecución y un entero que informa lo solicitado 
 por el método en sí, si el método lo requiere y su ejecución fue satisfactoria. Su especificación 
-se muestra en el anexo, leer detenidamente los comentarios de cada método. 
+se muestra en el anexo, leer detenidamente los comentarios de cada método.
 
 **ver anexo**
 

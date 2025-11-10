@@ -5,8 +5,7 @@ import imple.Pila;
 import tda.DiccionarioMultipleTDA;
 import tda.PilaTDA;
 
-/*
-### Ejercicio 10
+/* ### Ejercicio 10
 Se define un método que reciba una PilaTDA y devuelva un DiccionarioSimpleTDA, 
 en el cual se guardarán los elementos de la pila como claves, y la cantidad de apariciones de 
 dicho elemento en la pila, como valores.

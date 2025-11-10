@@ -5,8 +5,7 @@ import tda.DiccionarioSimpleTDA;
 import imple.ColaPrioridad;
 import imple.Conjunto;
 
-/*
- ### Ejercicio 5
+/* ### Ejercicio 5
 Se busca implementar un DiccionarioSimpleTDA usando únicamente una 
 ColaPrioridadTDA. Aclaración: se mantiene la interfaz de DiccionarioSimpleTDA; en la 
 implementación en vez de utilizar un arreglo de enteros (estructura estática) o una lista 

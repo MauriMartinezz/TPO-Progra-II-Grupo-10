@@ -6,9 +6,9 @@ import tda.ConjuntoTDA;
 import tda.PilaTDA;
 import utils.ConjuntoUtils;
 import utils.PilaUtils;
-
-//     Ejercicio 7  
-//     Definir un método que reciba una `PilaTDA` y devuelva un `ConjuntoTDA` con los **elementos repetidos**.  
+/* ### Ejercicio 7
+Se define un método que reciba una PilaTDA y devuelva un ConjuntoTDA con los elementos repetidos de la pila.
+*/
 
 public class Uso {
 
