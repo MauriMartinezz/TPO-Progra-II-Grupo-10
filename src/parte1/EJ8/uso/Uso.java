@@ -16,11 +16,11 @@ public class Uso {
     public static ColaTDA colaSinRepetir(ColaTDA cola){
         //complejidad O(n*m)
 
-        ColaTDA colaAux = ColaUtils.copiarCola(cola);
+        ColaTDA colaAux = ColaUtils.copiarCola(cola); // copiar la cola original
         ColaTDA colaSinRepetidos = new Cola();
         colaSinRepetidos.inicializarCola();
 
-        while(!colaAux.colaVacia()){
+        while(!colaAux.colaVacia()){ // recorrer la cola original
             // comprobar si el elemento ya fue añadido a la cola resultado
             if(!ColaUtils.existeElementoEnCola(colaSinRepetidos, colaAux.primero())){
                 colaSinRepetidos.acolar(colaAux.primero());

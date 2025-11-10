@@ -28,13 +28,13 @@ public class Uso {
         if (a.arbolVacio()) {
             return 0; // Caso base: árbol vacío
         } else {
-            int sumaIzq = sumarImpares(a.hijoIzq());
-            int sumaDer = sumarImpares(a.hijoDer());
+            int sumaIzq = sumarImpares(a.hijoIzq()); // Sumar impares del subárbol izquierdo
+            int sumaDer = sumarImpares(a.hijoDer()); // Sumar impares del subárbol derecho
             int valorActual = a.raiz();
             if (valorActual % 2 != 0) { // Verificar si es impar
-                return valorActual + sumaIzq + sumaDer;
+                return valorActual + sumaIzq + sumaDer; // Sumar el valor actual si es impar
             } else {
-                return sumaIzq + sumaDer;
+                return sumaIzq + sumaDer; // No sumar el valor actual si es par
             }
         }
     }

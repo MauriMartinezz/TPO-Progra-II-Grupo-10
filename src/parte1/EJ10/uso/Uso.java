@@ -1,8 +1,9 @@
 package parte1.EJ10.uso;
 
-import imple.DiccionarioMultiple;
+
+import imple.DiccionarioSimple;
 import imple.Pila;
-import tda.DiccionarioMultipleTDA;
+import tda.DiccionarioSimpleTDA;
 import tda.PilaTDA;
 
 /* ### Ejercicio 10
@@ -14,31 +15,34 @@ dicho elemento en la pila, como valores.
 
 public class Uso {
 
-    public static DiccionarioMultipleTDA Metodo(PilaTDA pila) {
+    public static DiccionarioSimpleTDA Metodo(PilaTDA pila) {
         // complejidad O(n*m) polinomica
 
-        DiccionarioMultipleTDA dic = new DiccionarioMultiple();
+        DiccionarioSimpleTDA dic = new DiccionarioSimple();
         dic.inicializarDiccionario();
         PilaTDA aux = utils.PilaUtils.copiarPila(pila);
+       
+        while (!aux.pilaVacia()) { // recorrer la pila
+            int elemento = aux.tope(); // obtener el elemento
+            aux.desapilar(); 
+            int contador = 1; 
 
-        while (!aux.pilaVacia()) {
-            int elemento = aux.tope();
-            aux.desapilar();
-            int contador = 1;
-
-            PilaTDA aux2 = utils.PilaUtils.copiarPila(aux);
-            if (!dic.claves().pertenece(elemento)) {
-                while (!aux2.pilaVacia()) {
+            PilaTDA aux2 = utils.PilaUtils.copiarPila(aux); // copiar la pila para contar apariciones
+            if (!dic.claves().pertenece(elemento)) { // si el elemento no está en el diccionario
+                while (!aux2.pilaVacia()) { // contar apariciones del elemento
                     if (aux2.tope() == elemento) {
                         contador++;
                     }
+                    
                     aux2.desapilar();
                 }
 
-                dic.agregar(elemento, contador);
+                dic.agregar(elemento, contador); // agregar al diccionario el valor y su contador
             }
         }
+    
         return dic;
+
     }
 
     public static void main(String[] args) {
@@ -53,10 +57,8 @@ public class Uso {
         utils.PilaUtils.imprimirPila(pila);
 
         // Mostrar el diccionario resultante
-        System.out.println("Diccionario Multiple resultante:");
-        DiccionarioMultipleTDA dic = Metodo(pila);
-        utils.DiccionarioMultipleUtils.mostrarDM(dic); 
-    
+        System.out.println("Diccionario Simple resultante:");
+        DiccionarioSimpleTDA dic = Metodo(pila);
+        utils.DiccionarioSimpleUtils.mostrarDS(dic);
     }
-
 }

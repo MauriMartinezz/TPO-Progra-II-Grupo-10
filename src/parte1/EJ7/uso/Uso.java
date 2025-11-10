@@ -22,16 +22,16 @@ public class Uso {
         PilaTDA pilaAux = new Pila();
         pilaAux.inicializarPila();
 
-        while(!pila.pilaVacia()){
-            if(conjunto.pertenece(pila.tope())){
-                conjuntoRepetidos.agregar(pila.tope());
+        while(!pila.pilaVacia()){ // recorrer la pila
+            if(conjunto.pertenece(pila.tope())){ // si ya estaba en el conjunto, es repetido
+                conjuntoRepetidos.agregar(pila.tope()); // agregar al conjunto de repetidos
             }
             conjunto.agregar(pila.tope()); 
             pilaAux.apilar(pila.tope());
             pila.desapilar();
         }
 
-        while(!pilaAux.pilaVacia()){
+        while(!pilaAux.pilaVacia()){ // restaurar la pila original
             pila.apilar(pilaAux.tope());
             pilaAux.desapilar();
         }

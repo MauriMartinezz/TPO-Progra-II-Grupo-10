@@ -29,14 +29,14 @@ public class Uso {
         } else {
             if (a.hijoIzq().arbolVacio() && a.hijoDer().arbolVacio()) { // Es hoja?
                 if (a.raiz() % 2 == 0) { // Verificar si es par
-                    return 1;
+                    return 1; // Contar la hoja si es par
                 } else {
-                    return 0;
+                    return 0; // No contar la hoja si es impar
                 }
             } else {
-                int sumaIzq = sumarPares(a.hijoIzq());
-                int sumaDer = sumarPares(a.hijoDer());
-                return sumaIzq + sumaDer;
+                int sumaIzq = sumarPares(a.hijoIzq()); // Sumar pares del subárbol izquierdo
+                int sumaDer = sumarPares(a.hijoDer()); // Sumar pares del subárbol derecho
+                return sumaIzq + sumaDer; // Sumar los resultados de ambos subárboles
             }
         }
     }

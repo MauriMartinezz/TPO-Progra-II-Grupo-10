@@ -22,14 +22,14 @@ public class Uso {
         ConjuntoTDA valoresDiccionario = new Conjunto();
         valoresDiccionario.inicializarConjunto();
 
-        while (!claves.conjuntoVacio()) {
+        while (!claves.conjuntoVacio()) { // recorrer las claves
             int clave = claves.elegir();
             ConjuntoTDA valoresConLaClave = diccionarioAux.recuperar(clave);
 
-            while (!valoresConLaClave.conjuntoVacio()) {
+            while (!valoresConLaClave.conjuntoVacio()) { // recorrer los valores de la clave
                     int valor = valoresConLaClave.elegir();
-                    if(!valoresDiccionario.pertenece(valor)){
-                        valoresUnicosCola.acolar(valor);
+                    if(!valoresDiccionario.pertenece(valor)){ // si el valor no está en el conjunto de valores ya agregados
+                        valoresUnicosCola.acolar(valor); 
                         valoresDiccionario.agregar(valor);
                     }
                     valoresConLaClave.sacar(valor);

@@ -43,15 +43,15 @@ public class Uso {
         puentes.inicializarConjunto();
 
         ConjuntoTDA vertices = g.vertices();
-        while (!vertices.conjuntoVacio()) {
+        while (!vertices.conjuntoVacio()) { // recorrer los vertices
             int vertice = vertices.elegir();
-            if (g.existeArista(origen, vertice) && g.existeArista(vertice, destino)) {
-                puentes.agregar(vertice);
+            if (g.existeArista(origen, vertice) && g.existeArista(vertice, destino)) { // es puente?
+                puentes.agregar(vertice); // agregar al conjunto de puentes
             }
-            vertices.sacar(vertice);
+            vertices.sacar(vertice); // sacar el vertice ya procesado
         }
 
-        return puentes;
+        return puentes; // devolver el conjunto de puentes
     }
 }
 

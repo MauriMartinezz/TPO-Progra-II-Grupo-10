@@ -25,23 +25,23 @@ public class Uso {
         ColaTDA colaAux = new Cola();
         colaAux.inicializarCola();
 
-        while(!pila.pilaVacia()){
+        while(!pila.pilaVacia()){ // recorrer la pila
             pilaAux.apilar(pila.tope());
             
-            while(!cola.colaVacia()){
-                if(pila.tope() == cola.primero()) conjuntoComunes.agregar(pila.tope());
+            while(!cola.colaVacia()){ // recorrer la cola
+                if(pila.tope() == cola.primero()) conjuntoComunes.agregar(pila.tope()); // si son iguales, agregar al conjunto
                 colaAux.acolar(cola.primero());
                 cola.desacolar();
             }
 
-            while(!colaAux.colaVacia()){
+            while(!colaAux.colaVacia()){ // restaurar la cola original
                 cola.acolar(colaAux.primero());
                 colaAux.desacolar();
             }
             pila.desapilar();
         }
 
-        while(!pilaAux.pilaVacia()){
+        while(!pilaAux.pilaVacia()){ // restaurar la pila original
             pila.apilar(pilaAux.tope());
             pilaAux.desapilar();
         }

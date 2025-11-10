@@ -13,9 +13,9 @@ public class Uso {
         PilaTDA pilaAux = utils.PilaUtils.copiarPila(pila);
         int cantPares = 0;
         int cantidadElementos = 0;
-        while(!pilaAux.pilaVacia()){
+        while(!pilaAux.pilaVacia()){ // recorrer la pila
             cantidadElementos++;
-            if (pilaAux.tope() % 2 == 0) cantPares++;
+            if (pilaAux.tope() % 2 == 0) cantPares++; // si es par, incrementar contador
             pilaAux.desapilar();
         }
 

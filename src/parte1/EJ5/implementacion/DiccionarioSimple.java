@@ -36,11 +36,11 @@ public class DiccionarioSimple implements DiccionarioSimpleTDA {
         ColaPrioridadTDA aux = new ColaPrioridad();
         aux.inicializarCola();
 
-        while (!cola.colaVacia()) {
+        while (!cola.colaVacia()) { //recorremos la cola
             int val = cola.primero();
             int pri = cola.prioridad();
             cola.desacolar();
-            if (pri != clave) {
+            if (pri != clave) { // si no es la clave a eliminar, la agregamos a aux
                 aux.acolarPrioridad(val, pri);
             }
         }
@@ -68,7 +68,7 @@ public class DiccionarioSimple implements DiccionarioSimpleTDA {
             int pri = cola.prioridad();
             cola.desacolar();
 
-            if (pri == clave) {
+            if (pri == clave) { // si es la clave buscada, guardamos el valor
                 resultado = val;
                 encontrado = true;
             }
@@ -83,7 +83,7 @@ public class DiccionarioSimple implements DiccionarioSimpleTDA {
             cola.acolarPrioridad(val, pri);
         }
 
-        if (!encontrado)
+        if (!encontrado) 
             return 0; //o Throw new Exception("Clave no encontrada");
 
         return resultado;
@@ -98,7 +98,7 @@ public class DiccionarioSimple implements DiccionarioSimpleTDA {
         ColaPrioridadTDA aux = new ColaPrioridad();
         aux.inicializarCola();
 
-        while (!cola.colaVacia()) {
+        while (!cola.colaVacia()) { //recorremos la cola
             int val = cola.primero();
             int pri = cola.prioridad();
             cola.desacolar();
